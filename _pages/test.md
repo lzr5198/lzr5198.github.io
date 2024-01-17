@@ -1,6 +1,6 @@
 ---
 layout: archive
-permalink: /
+permalink: /test/
 author_profile: true
 redirect_from: 
   - /test/
