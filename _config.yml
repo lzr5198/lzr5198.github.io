@@ -9,7 +9,7 @@
 locale                   : "en-US"
 title                    : "LIN Zhaorun"
 title_separator          : "-"
-name                     : &name "林昭潤"
+name                     : &name "LIN Zhaorun"
 description              : &description "Personal Website"
 url                      : https://lzr5198.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
