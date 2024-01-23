@@ -1,6 +1,6 @@
 ---
-title: "Test"
-permalink: /test/
+title: "CV"
+permalink: /cv/
 ---
 
 <!DOCTYPE html>
@@ -9,24 +9,25 @@ permalink: /test/
   <meta charset="utf-8">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" rel="stylesheet"> -->
   <style type="text/css">
     body{margin-top:20px;}
     .section {
       padding: 25px 0;
       position: relative;
-      /* box-shadow: 0 0 1.25rem rgb(211, 209, 209); */
     }
     .gray-bg {
       background-color: #ffffff;
     }
-    .section-title h1 {
-      font-weight: 700;
-      color: #000000;
-      font-size: 30px;
-      margin: 0 0 15px;
+    .section-title h2 {
+      /* font-weight: 500; */
+      font-weight: bold;
+      color: #494152;
+      font-size: 1.563em;
+      margin: 0 0 20px;
       /* border-left: 5px solid #000000; */
       /* fc5356 */
+      font-family: -apple-system,".SFNSText-Regular","San Francisco","Roboto","Segoe UI","Helvetica Neue","Lucida Grande",Arial,sans-serif;
       padding-left: 0px;
     }
     .section-title {
@@ -48,6 +49,11 @@ permalink: /test/
       margin: 0;
       padding: 0px 0px;
       list-style: none;
+    }
+    .resume-box li {
+      position: relative;
+      padding: 0 20px 0 45px;
+      margin: 0 0 30px;
     }
     .resume-box li {
       position: relative;
@@ -85,18 +91,19 @@ permalink: /test/
       background: #000000;
       /* fc5356 */
       color: #ffffff;
-      font-size: 10px;
-      padding: 2px 10px;
+      font-size: 12px;
+      padding: 2px 12px;
       display: inline-block;
-      margin-bottom: 12px;
-      border-radius: 20px;
+      margin-bottom: 6px;
+      border-radius: 10px;
       font-weight: 600;
     }
     .resume-box h5 {
       font-weight: 700;
       color: #20247b;
-      font-size: 16px;
-      margin-bottom: 10px;
+      font-size: 20px;
+      /* margin-bottom: 10px; */
+      margin: 10px 0 10px 0px;
     }
     .resume-box p {
       margin: 0;
@@ -116,6 +123,9 @@ permalink: /test/
 
 <body>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
+
+  <!-- Education -->
+
   <section class="section gray-bg" id="resume">
     <div class="container">
       <div>
@@ -123,7 +133,7 @@ permalink: /test/
         <div>
           <!-- class="col-lg-6" -->
           <div class="section-title">
-            <h1>Education</h1>
+            <h2>Education</h2>
           </div>
         </div>
       </div>
@@ -138,8 +148,8 @@ permalink: /test/
                 </div>
                 <span class="time">09/2023 - Present</span>
                 <h5>MPhil in Computer Science</h5>
-                  <p>- Supervisor: Prof. Amir K. Goharshady</p>
-                  <p>- A member of the ALPACAS Research Group</p>
+                <p>- Supervisor: Prof. Amir K. Goharshady</p>
+                <p>- A member of the ALPACAS Research Group</p>
                   
               </li>
               <li>
@@ -187,6 +197,50 @@ permalink: /test/
       </div>
     </div>
   </section>
+
+  <!-- Internships -->
+
+  <section class="section gray-bg" id="resume">
+    <div class="container">
+      <div>
+        <!-- class="row" -->
+        <div>
+          <!-- class="col-lg-6" -->
+          <div class="section-title">
+            <h2>Internships</h2>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="m-15px-tb">
+          <!-- col-lg-6  -->
+          <div class="resume-box">
+            <ul>
+              <li>
+                <div class="icon">
+                  <i class="fa fa-suitcase"></i>
+                </div>
+                <span class="time">07/2022 - 09/2022</span>
+                <h5>AI & Data Engineering Intern</h5>
+                <p>- Collaborated actively in an agile manner to develop various systems, models, and data pipelines.</p>
+                <p>- Performed work such as <b>Exploratory Data Analysis</b>, <b>Data Augmentation</b>, <b>K-means Clustering</b>, <b>Classification</b>, and <b>CRUD Web Application</b>.</p>
+              </li>
+              <li>
+                <div class="icon">
+                  <i class="fa fa-suitcase"></i>
+                </div>
+                <span class="time">12/2021 - 02/2022</span>
+                <h5>Junior Developer</h5>
+                <p>- Participated in company's system software design, analysis and development process.</p>
+                <p>- Managed firm's website and designed the <b>mobile website layouts</b>, worked in a team to develop a speech-to-text recognition system <b>(hyperparameter tuning)</b>.</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.bundle.min.js"></script>
   <script type="text/javascript"></script>
