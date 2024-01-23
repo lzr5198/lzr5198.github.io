@@ -196,8 +196,8 @@
    ========================================================================== */
 
 .page__share {
-  margin-top: 2em;
-  padding-top: 1em;
+  margin-top: 0em;
+  padding-top: 0em;
   border-top: 1px solid $border-color;
 
   @include breakpoint(max-width $small) {
