@@ -6,8 +6,8 @@ main:
   - title: "Publications"
     url: /publications/
 
-  - title: "Test"
-    url: /test/
+  # - title: "Test"
+  #   url: /test/
 
   - title: "Teaching"
     url: /teaching/
