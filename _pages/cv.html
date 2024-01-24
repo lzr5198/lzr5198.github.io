@@ -90,58 +90,6 @@ permalink: /cv/
       </div>
     </section>
 
-    <!-- Internships -->
-
-    <section class="section gray-bg" id="resume">
-      <div class="container">
-        <div>
-          <!-- class="row" -->
-          <div class="section-title">
-            <h2>Internships</h2>
-          </div>
-        </div>
-        <div>
-          <div class="resume-box">
-            <ul>
-              <li>
-                <div class="icon">
-                  <i class="fa fa-suitcase"></i>
-                </div>
-                <span class="time">2022.07 - 2022.09</span>
-                <h5>AI & Data Engineering Intern</h5>
-                <div class="place">@Baronford & Associates</div>
-
-                <p>- Collaborated actively in an agile manner to develop various systems, models, and data pipelines.</p>
-                <p>- Performed work such as Exploratory Data Analysis, Data Augmentation, K-means Clustering, Classification, and CRUD Web Application.</p>
-              </li>
-              <li>
-                <div class="icon">
-                  <i class="fa fa-suitcase"></i>
-                </div>
-                <span class="time">2021.12 - 2022.02</span>
-                <h5>Junior Developer</h5>
-                <div class="place">@Radiance Tech International Limited</div>
-
-                <p>- Participated in company's system software design, analysis and development process.</p>
-                <p>- Managed firm's website and designed the mobile website layouts, worked in a team to develop a speech-to-text recognition system (hyperparameter tuning).</p>
-              </li>
-              <li>
-                <div class="icon">
-                  <i class="fa fa-suitcase"></i>
-                </div>
-                <span class="time">2019.09 - 2020.02</span>
-                <h5>Subcommittee member</h5>
-                <div class="place">@China Entrepreneur Network (HKUST Chapter)</div>
-
-                <p>- China Entrepreneur Network (CEN) is an organization that nurtures students from all disciplines to become leaders and entrepreneurs for a sustainable future. It is a welcoming society that embraces students from all regions and have four other chapters in the U.S. and Australia.</p>
-                <p>- Held events and workshops that invite professionals from various fields to share their experiences in startups and entrepreneurship.</p>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <!-- Projects -->
     <section class="section gray-bg" id="resume">
       <div class="container">
@@ -163,7 +111,19 @@ permalink: /cv/
                 <h5>Blockchain-based E-voting system using Blind Signatures</h5>
                 <p>- Designed and implemented a blockchain-based e-voting system using blind signatures and relayer structure.</p>
                 <p>- At least 40% more efficient in terms of gas cost than other existing systems with same security measures</p>
-                <a href="/publication/2024-blind-vote">[Publication]</a>
+                <code>Solidity / Blind Signatures / Ethereum</code>
+                <div><a href="/publication/2024-blind-vote">[Publication]</a></div>
+              </li>
+              <li>
+                <div class="icon" style="line-height: 38px;">
+                  <i class="fas fa-project-diagram"></i>
+                </div>
+                <span class="time">2023.02 - 2023.05</span>
+                <h5>3-party Random Number Generation on Ethereum</h5>
+                <p>- Implemented a protocol which allows truly uniformly random number to be generated on blockchain by leveraging RSA and Goldwasser-Micali cryptosystem.</p>
+                <p>- The number is tamper-proof and secret until it is generated and finalized.</p>
+                <code>RSA / Goldwasser-Micali Cryptosystem / Homomorphic Encryption / Ethereum</code>
+                <div><a target="_blank" href="https://github.com/lzr5198/3-party-RNG">[Github]</a></div>
               </li>
               <li>
                 <div class="icon" style="line-height: 38px;">
@@ -171,12 +131,67 @@ permalink: /cv/
                 </div>
                 <span class="time">2022.08 - 2023.05</span>
                 <h5>Advanced Video Analytics for Smart Carpark</h5>
-                <p>- HKUST Best FYP Award for the year 2022-2023</p>
-                <p>- Awarded the Huawei FYP award.</p>
+                <p>- Awarded the <a target="_blank" href="/files/prof_sc_best_fyp.pdf">HKUST Best FYP Award</a> and the <a target ="_blank" href="/files/industry_best_fyp.pdf">Huawei FYP award</a> for the year 22/23.</p>
                 <p>- Worked with FYP team members to design and implement a Vacancy Detection System for smart carpark. It achieves an accuracy of 91% and shows no false detection when tested in a real world setting.</p>
                 <!-- <a target=”_blank” href="https://github.com/lzr5198/carpark-vacancy-detection-system">[github]</a> -->
-                <a target="_blank" href="https://github.com/lzr5198/carpark-vacancy-detection-system">[Github]</a>
-                
+                <code>CNN / Yolov5 / cv2 / Django</code>
+                <div><a target="_blank" href="https://github.com/lzr5198/carpark-vacancy-detection-system">[Github]</a></div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Internships -->
+    <section class="section gray-bg" id="resume">
+      <div class="container">
+        <div>
+          <!-- class="row" -->
+          <div class="section-title">
+            <h2>Internships</h2>
+          </div>
+        </div>
+        <div>
+          <div class="resume-box">
+            <ul>
+              <li>
+                <div class="icon">
+                  <i class="fa fa-suitcase"></i>
+                </div>
+                <span class="time">2023.07 - 2023.09</span>
+                <h5>Research Assistant</h5>
+                <div class="place">@Prof. Gary Chan's lab, HKUST</div>
+
+                <p>- Worked on edge AI to install AI models on edge devices such as cameras for detecting vacant car slots in the carpark.</p>
+                <p>- Worked on a fall detection system which gives alarm when an elderly is detected falling down.</p>
+                <code>Edge AI / CNN / Yolov8 / cv2 / CUDA</code>
+              </li>
+              <li>
+                <div class="icon">
+                  <i class="fa fa-suitcase"></i>
+                </div>
+                <span class="time">2022.07 - 2022.09</span>
+                <h5>AI & Data Engineering Intern</h5>
+                <div class="place">@Baronford & Associates</div>
+
+                <p>- Collaborated in an agile manner to develop various systems, models, and data pipelines for a patient record system.</p>
+                <code>EDA / Data Augmentation / K-means Clustering / Classification / CRUD</code>
+
+              </li>
+              <li>
+                <div class="icon">
+                  <i class="fa fa-suitcase"></i>
+                </div>
+                <span class="time">2021.12 - 2022.02</span>
+                <h5>Junior Developer</h5>
+                <div class="place">@Radiance Tech International Limited</div>
+
+                <p>- Participated in company's system software design, analysis and development process.</p>
+                <p>- Managed firm's website and designed the mobile website layouts, worked in a team to develop a speech-to-text recognition system (hyperparameter tuning).</p>
+                <code>HTML / CSS / JavaScript / Hyperparameter tuning</code>
+
               </li>
             </ul>
           </div>
@@ -251,6 +266,37 @@ permalink: /cv/
                 <h5>Postgraduate Studentship</h5>
                 <div class="place">@HKUST</div>
                 <p>HK$18390/month</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Extracurricular activities -->
+    <section class="section gray-bg" id="resume">
+      <div class="container">
+        <div>
+          <div>
+            <div class="section-title">
+              <h2>Extracurricular activities</h2>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="resume-box">
+            <ul>
+              <li>
+                <div class="icon">
+                  <i class="fa fa-globe"></i>
+                </div>
+                <span class="time">2019.09 - 2020.02</span>
+                <h5>Subcommittee member</h5>
+                <div class="place">@China Entrepreneur Network (HKUST Chapter)</div>
+
+                <p>- China Entrepreneur Network (CEN) is an organization that nurtures students from all disciplines to become leaders and entrepreneurs for a sustainable future. It is a welcoming society that embraces students from all regions and have four other chapters in the U.S. and Australia.</p>
+                <p>- Held events and workshops that invite professionals from various fields to share their experiences in startups and entrepreneurship.</p>
               </li>
             </ul>
           </div>
