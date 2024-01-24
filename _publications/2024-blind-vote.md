@@ -2,7 +2,7 @@
 title: "Blind Vote: Economical and Secret Blockchain-based Voting"
 # collection: publications
 permalink: /publication/2024-blind-vote
-excerpt: 'This paper is about the number 1. The number 2 is left for future work.'
+# excerpt: 'This paper is about the number 1. The number 2 is left for future work.'
 # date: 2024-1-19
 # venue: 'IEEE International Conference on Blockchain and Cryptocurrency, ICBC 2024'
 paperurl: '/files/blind-vote.pdf'
