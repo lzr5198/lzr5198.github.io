@@ -8,5 +8,5 @@ date: 2024-01-30
 location: "Hong Kong SAR"
 ---
 
-Teaching assistant that hosts the lab sessions to give students hands-on experience of Logism.
+Worked as a teaching assistant that hosts lab sessions to give students hands-on experience of Logism.
 
