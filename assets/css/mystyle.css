@@ -92,8 +92,19 @@
   font-weight: 700;
   /* position: absolute; */
   color: #20247b;
-  right: 0px;
-  text-align: right;
+  left: 0px;
+  text-align: left;
+  margin: 10px 0px 10px 0px;
+}
+.authors{
+  font-size: 16px;
+  font-weight: 700;
+  left: 0px;
+  margin: 10px 0px 10px 0px;
+  text-align: left;
+}
+.title{
+  margin: 10px 0px 10px 0px;
 }
 .resume-box p {
   margin: 0;
