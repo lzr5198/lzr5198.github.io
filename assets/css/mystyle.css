@@ -39,7 +39,8 @@
 .resume-box li {
   position: relative;
   padding: 0 20px 0 45px;
-  margin: 0 0 30px;
+  /* margin: 0 0 30px; */
+  margin: 20px 0 30px 0px;
 }
 .resume-box li:last-child {
   margin-bottom: 0;
@@ -94,17 +95,17 @@
   color: #20247b;
   left: 0px;
   text-align: left;
-  margin: 10px 0px 10px 0px;
+  margin: 5px 0px 5px 0px;
 }
 .authors{
   font-size: 16px;
   font-weight: 700;
   left: 0px;
-  margin: 10px 0px 10px 0px;
+  margin: 5px 0px 5px 0px;
   text-align: left;
 }
 .title{
-  margin: 10px 0px 10px 0px;
+  margin: 5px 0px 5px 0px;
 }
 .resume-box p {
   margin: 0;

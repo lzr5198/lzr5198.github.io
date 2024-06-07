@@ -18,23 +18,41 @@
     <div class="resume-box">
       <ul>
         <li>
+          {% if post.collection == 'publications' %}
           <div class="icon">
             <i class="fas fa-book"></i>
           </div>
-          
-          <h5 class="title">{{ title }} <a style="font-size: 14px;" href="{{ base_path }}{{ post.url }}" rel="permalink">[Read more]</a>
-            {% if post.under_review %}
-              <p style="color: red; display: inline; font-size: 14px;">(Under review)</p>
+          {% else %}
+          <div class="icon">
+            <i class="fas fa-chalkboard-teacher"></i>
+          </div>
+          {% endif %}
+
+          <h5 class="title">
+            {% if post.collection == 'publications' %}
+            <a href="{{ base_path }}{{ post.url }}">{{ title }}</a>
+              {% if post.under_review %}
+                <p style="color: red; display: inline; font-size: 14px;">(Under review)</p>
+              {% endif %}
+            {% else %}
+              {% if post.details == true %}
+                <a href="{{ base_path }}{{ post.url }}">{{ title }}</a>
+              {% else %}
+                {{ title }}
+              {% endif %}
             {% endif %}
           </h5>
+          
           
           <div class="place">
             <i>{{ post.venue }}</i>, {{ post.date | default: "1900-01-01" | date: "%Y" }}
           </div>
           
+          {% if post.collection == 'publications' %}
           <div class="authors">
             {{ post.authors }}
           </div>
+          {% endif %}
 
         </li>
       </ul>

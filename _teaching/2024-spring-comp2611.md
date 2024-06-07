@@ -1,11 +1,12 @@
 ---
-title: "COMP2611 Teaching Assistant"
+title: "Computer Organization by Prof. Li, Xin & Prof. LAM, Ngok"
 collection: teaching
 type: "Undergraduate course"
 permalink: /teaching/2024-spring-comp2611
-venue: "The Hong Kong University of Science and Technology, Department of Computer Science and Engineering"
+venue: "CSE, HKUST"
 date: 2024-01-30
 location: "Hong Kong SAR"
+details: false
 ---
 
 Worked as a teaching assistant that hosted lab sessions to give students hands-on experience of Logisim.

@@ -15,4 +15,6 @@ index_terms: ['Electronic Voting', 'Blind Signatures', 'Smart Contracts']
 
 In this work, we propose a new approach called Blind Vote, which is an untraceable, secure, efficient, secrecy-preserving and fully on-chain electronic voting protocol based on the well-known concept of Chaum’s blind signatures. We illustrate that our approach achieves the same security guarantees as previous methods such as Tornado Vote, while consuming significantly less gas. Thus, we provide a cheaper and considerably more gas-efficient alternative for anonymous blockchain-based voting.
 
-<code>Index Terms — {{ page.index_terms | join: ', ' }}</code>
+{% if page.index_terms %}
+  <code>Index Terms — {{ page.index_terms | join: ', ' }}</code>
+{% endif %}
