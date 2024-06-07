@@ -6,7 +6,7 @@ date: 2024-8-19
 venue: 'IEEE Blockchain'
 paperurl: '/files/blind-vote.pdf'
 authors: 'Amir K. Goharshady, Zhaorun Lin'
-under_review: False
+under_review: false
 index_terms: ['Electronic Voting', 'Blind Signatures', 'Smart Contracts']
 # excerpt: 'This paper is about the number 1. The number 2 is left for future work.'
 # citation: 'Your Name, You. (2009). &quot;Paper Title Number 1.&quot; <i>Journal 1</i>. 1(1).'
