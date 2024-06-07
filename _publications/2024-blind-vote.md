@@ -1,6 +1,6 @@
 ---
 title: "Blind Vote: Economical and Secret Blockchain-based Voting"
-collection: Publications
+collection: publications
 permalink: /publication/2024-blind-vote
 # excerpt: 'This paper is about the number 1. The number 2 is left for future work.'
 date: 2024-8-19
