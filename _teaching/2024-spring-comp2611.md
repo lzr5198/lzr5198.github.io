@@ -1,6 +1,6 @@
 ---
 title: "COMP2611 Teaching Assistant"
-collection: teaching
+collection: Teaching
 type: "Undergraduate course"
 permalink: /teaching/2024-spring-comp2611
 venue: "The Hong Kong University of Science and Technology, Department of Computer Science and Engineering"
