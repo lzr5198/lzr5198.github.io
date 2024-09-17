@@ -4,7 +4,6 @@
 
 .archive {
   margin-bottom: 2em;
-  width: 70%;
 
   @include breakpoint($medium) {
     @include span(12 of 12);
