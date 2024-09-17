@@ -7,9 +7,9 @@
 
 # Site Settings
 locale                   : "en-US"
-title                    : "LIN Zhaorun"
+title                    : "Zhaorun Lin"
 title_separator          : "-"
-name                     : &name "LIN Zhaorun"
+name                     : &name "Zhaorun Lin"
 description              : &description "Personal Website"
 url                      : https://www.linzhaorun.com # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
@@ -80,7 +80,7 @@ analytics:
 
 # Site Author
 author:
-  name             : "LIN Zhaorun"
+  name             : "Zhaorun Lin"
   avatar           : "profile.jpg"
   bio              : "A year 2 MPhil student in Computer Science @ the Hong Kong University of Science and Technology"
   location         : "Bydgoszcz, Poland (live)"

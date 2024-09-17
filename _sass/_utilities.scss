@@ -182,6 +182,7 @@ body:hover .visually-hidden button {
 /* social icons*/
 
 .social-icons {
+  z-index: 99999;
   .fa {
     color: #000;
   }
