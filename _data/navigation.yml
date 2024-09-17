@@ -1,13 +1,22 @@
 # main links links
 main:
-  - title: "CV"
-    url: /cv/
-
   - title: "Publications"
     url: /publications/
 
+  - title: "Projects"
+    url: /projects/
+
+  - title: "Job Experiences"
+    url: /jobs/
+
+  - title: "Awards"
+    url: /awards/
+
   - title: "TAs"
     url: /teaching/
+
+  - title: "CV"
+    url: /files/cv.pdf
 
   # - title: "Blogs"
   #   url: /year-archive/

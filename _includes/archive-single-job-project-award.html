@@ -1,0 +1,78 @@
+{% include base_path %}
+
+{% if post.header.teaser %}
+  {% capture teaser %}{{ post.header.teaser }}{% endcapture %}
+{% else %}
+  {% assign teaser = site.teaser %}
+{% endif %}
+
+{% if post.id %}
+  {% assign title = post.title | markdownify | remove: "<p>" | remove: "</p>" %}
+{% else %}
+  {% assign title = post.title %}
+{% endif %}
+
+<link rel="stylesheet" type="text/css" href="/assets/css/mystyle.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<div class="{{ include.type | default: "list" }}__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    <div class="resume-box">
+      <ul>
+        <li>
+          {% if post.collection == 'jobs' %}
+          <div class="icon">
+            <i class="fa fa-suitcase"></i>
+          </div>
+          {% elsif post.collection == 'projects'%}
+          <div class="icon">
+            <i class="fas fa-project-diagram"></i>
+          </div>
+          {% else %}
+          <div class="icon">
+            <i class="fas fa-award"></i>
+          </div>
+          {% endif %}
+
+          <h5>{{ post.name }}</h5>
+          <span class="time">
+            {% if post.collection == 'jobs' or post.collection == 'projects' %}
+              {{ post.date | default: "1900-01-01" | date: "%Y-%m" }} - {{ post.end_date | default: "1900-01-01" | date: "%Y-%m" }}
+            {% else %}
+              {{ post.date | default: "1900-01-01" | date: "%Y-%m" }}
+            {% endif %}
+          </span>
+          {% if post.place != nil %}
+            <div class="place">@{{ post.place }}</div>
+          {% endif %}
+          {{ post.content }}
+          {% if post.technologies != nil %}
+            <code>{{ post.technologies | join: ' / ' }}</code>
+          {% endif %}
+          
+          <div>
+            {% for link in post.links %}
+              {% if post.link_names[forloop.index0] == "github" %}
+                <a target="_blank" href="{{ link }}"><i class="fa fa-github" style="font-size:24px; margin-top: 5px"></i></a>
+              {% else %}
+                <a href="{{ link }}">[{{ post.link_names[forloop.index0] }}]</a>
+              {% endif %}
+            {% endfor %}
+          </div>
+        </li>
+      </ul>
+    </div>
+  </article>
+</div>
+
+<!-- <script>
+  var post = {
+    details: {{ post.details | jsonify }},
+    links: "{{ post.links | jsonify  }}",
+    link_names: "{{ post.link_names | jsonify  }}",
+  };
+
+  console.log(post.details)
+
+</script> -->
+
+

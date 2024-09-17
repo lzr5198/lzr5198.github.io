@@ -1,7 +1,7 @@
 ---
 title: "Blind Vote: Economical and Secret Blockchain-based Voting"
 collection: publications
-permalink: /publication/2024-blind-vote
+permalink: /publications/2024-blind-vote
 date: 2024-8-19
 venue: 'IEEE Blockchain'
 paperurl: '/files/blind-vote.pdf'
