@@ -7,5 +7,5 @@ end_date:
 place: "HKUST"
 technologies: 
 links: ["https://www.linzhaorun.com/files/industry_best_fyp.pdf"]
-link_names: ["See more"]
+link_names: ["certificate"]
 ---

@@ -7,5 +7,5 @@ end_date:
 place: "HKUST"
 technologies:
 links: ["/files/dean_engineering_scholarship.pdf"]
-link_names: ["See more"]
+link_names: ["certificate"]
 ---

@@ -7,7 +7,7 @@ end_date: 2024-02-01
 place: 
 technologies: ["Solidity", "Blind Signatures", "Ethereum"]
 links: ["/publications/2024-blind-vote"]
-link_names: ["Publication"]
+link_names: ["publication"]
 ---
 <p>
   - Designed and implemented a blockchain-based e-voting system using blind signatures and relayer structure.
