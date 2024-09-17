@@ -62,9 +62,9 @@
 
             <span class="time">
               {% if post.collection == 'jobs' or post.collection == 'projects' %}
-                {{ post.date | default: "1900-01-01" | date: "%Y-%m" }} - {{ post.end_date | default: "1900-01-01" | date: "%Y-%m" }}
+                {{ post.date | date: "%b %Y" }} - {{ post.end_date | date: "%b %Y" }}
               {% else %}
-                {{ post.date | default: "1900-01-01" | date: "%Y-%m" }}
+                {{ post.date | date: "%b %Y" }}
               {% endif %}
             </span>
   
