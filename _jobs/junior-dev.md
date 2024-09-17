@@ -6,8 +6,8 @@ date: 2021-12-01
 end_date: 2022-02-01
 place: "Radiance Tech International Limited"
 technologies: ["HTML", "CSS", "JavaScript", "Hyperparameter tuning"]
-link: 
-link_type: 
+links: 
+link_types: 
 ---
 <P>
   - Participated in company's system software design, analysis and development process. 

@@ -125,6 +125,13 @@
 .title-time .title .title-link {
   font-size: 15px;
   font-weight: 500;
+  position: relative;
+  bottom: 2px;
+}
+
+.title-time .title h5 a{
+  display: inline-block;;
+  text-align: center;
 }
 
 

@@ -6,8 +6,8 @@ date: 2022-08-01
 end_date: 2023-05-01
 place: 
 technologies: ["CNN", "Yolov5", "cv2", "Django"]
-link: "https://github.com/lzr5198/carpark-vacancy-detection-system"
-link_type: "github"
+links: ["https://github.com/lzr5198/carpark-vacancy-detection-system", "https://cse.hkust.edu.hk/ug/fyp/bestfyp/#year2022-2023"]
+link_types: ["github", "See more"]
 ---
 <p>
   - Awarded the <a target="_blank" href="/files/prof_sc_best_fyp.pdf">HKUST Best FYP Award</a> and the <a target="_blank" href="/files/industry_best_fyp.pdf">Huawei FYP award</a> for the year 22/23.

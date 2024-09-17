@@ -6,6 +6,6 @@ date: 2019-11-01
 end_date:
 place: "HKUST"
 technologies:
-link: "/files/dean_engineering_scholarship.pdf"
-link_type: "certificate"
+links: ["/files/dean_engineering_scholarship.pdf"]
+link_types: ["certificate"]
 ---

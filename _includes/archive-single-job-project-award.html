@@ -38,24 +38,34 @@
             
             <span class="title">
               <h5>
-                <!-- <a target="_blank" href="{{ post.link }}">{{ post.name }}</a> -->
-
-              {{ post.name }}
-              {% if post.collection != 'jobs' %}
-              <a href="{{ post.link }}">
-                {% if post.link_type == "github" %}
-                    <i class="fa fa-github" style="font-size:24px;"></i>
-                {% elsif post.link_type == "publication" %}
-                    <i class="fa fa-file-alt" style="font-size:20px;"></i>
-                {% elsif post.link_type == "certificate" %}
-                    <i class="fas fa-medal" style="font-size:20px;"></i>
-                {% else %}
-                  <span class="title-link">
-                    [{{ post.link_type }}]
-                  </span>
+                {{ post.name }}
+                {% if post.links != nil %}
+                  {% for link in post.links %}
+                    {% if post.link_types[forloop.index0] == "github" %}
+                      <a href="{{ link }}">
+                        <i class="fa fa-github" style="font-size:24px;"></i>
+                      </a>
+                    {% elsif post.link_types[forloop.index0] == "publication" %}
+                      <a href="{{ link }}">
+                        <i class="fa fa-file-alt" style="font-size:20px;"></i>
+                      </a>
+                    {% elsif post.link_types[forloop.index0] == "certificate" %}
+                      <a href="{{ link }}">
+                        <i class="fas fa-medal" style="font-size:20px;"></i>
+                      </a>
+                    {% elsif post.link_types[forloop.index0] == "link" %}
+                      <a href="{{ link }}">
+                        <i class="fas fa-link"></i>
+                      </a>
+                    {% else %}
+                      <a href="{{ link }}">
+                        <span class="title-link">
+                          [{{ post.link_types[forloop.index0] }}]
+                        </span>
+                      </a>
+                    {% endif %}
+                  {% endfor %}
                 {% endif %}
-              </a>
-              {% endif %}
               </h5>
             </span>
 
