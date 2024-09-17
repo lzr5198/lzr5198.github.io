@@ -1,10 +1,12 @@
 ---
-title: "Computer Organization by Prof. Li, Xin & Prof. LAM, Ngok"
+title: "Computer Organization"
 collection: teaching
 type: "Undergraduate course"
 permalink: /teaching/2024-spring-comp2611
 venue: "CSE, HKUST"
+authors: "Prof. Li, Xin & Prof. LAM, Ngok"
 date: 2024-01-30
+term: "Spring"
 location: "Hong Kong SAR"
 details: false
 ---

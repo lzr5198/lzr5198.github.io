@@ -6,6 +6,6 @@ date: 2023-06-01
 end_date:
 place: "HKUST"
 technologies: 
-links: ["https://www.linzhaorun.com/files/industry_best_fyp.pdf"]
-link_names: ["certificate"]
+link: "https://www.linzhaorun.com/files/industry_best_fyp.pdf"
+link_type: "certificate"
 ---

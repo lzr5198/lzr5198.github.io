@@ -2,7 +2,8 @@
 title: "Blind Vote: Economical and Secret Blockchain-based Voting"
 collection: publications
 permalink: /publications/2024-blind-vote
-date: 2024-8-19
+date: 2024-08-19
+term: "Summer"
 venue: 'IEEE Blockchain'
 paperurl: '/files/blind-vote.pdf'
 authors: 'Amir K. Goharshady, Zhaorun Lin'

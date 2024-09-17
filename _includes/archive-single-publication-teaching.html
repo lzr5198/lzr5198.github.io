@@ -28,6 +28,8 @@
           </div>
           {% endif %}
 
+
+
           <h5 class="title">
             {% if post.collection == 'publications' %}
             <a href="{{ base_path }}{{ post.url }}">{{ title }}</a>
@@ -38,20 +40,40 @@
               {% if post.details == true %}
                 <a href="{{ base_path }}{{ post.url }}">{{ title }}</a>
               {% else %}
-                {{ title }}
+                
+
+                <div class="title-time">
+                  <span class="title">
+                    <h5>
+                    {{ title }}
+                    </h5>
+                  </span>
+                  <span class="time">
+                    {{ post.date | date: "%Y" }} {{ post.term }}
+                  </span>
+                </div>
+
+
               {% endif %}
             {% endif %}
           </h5>
-          
-          
-          <div class="place">
-            <i>{{ post.venue }}</i>, {{ post.date | default: "1900-01-01" | date: "%Y" }}
-          </div>
-          
+
           {% if post.collection == 'publications' %}
-          <div class="authors">
-            {{ post.authors }}
-          </div>
+            <div class="place">
+              <i>{{ post.venue }}</i>, {{ post.date | date: "%Y" }}
+            </div>
+            <div class="authors">
+              {{ post.authors }}
+            </div>
+
+          {% else %}
+            <div class="authors">
+              by {{ post.authors }}
+            </div>
+            <div class="place">
+              <i>@{{ post.venue }}</i>
+            </div>
+
           {% endif %}
 
         </li>
