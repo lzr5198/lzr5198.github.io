@@ -1,5 +1,5 @@
 ---
-name: "Advanced Video Analytics for Smart Carpark"
+name: "Real-time Vacancy Detection System Using Fisheye Cameras"
 collection: projects
 # permalink: /projects/blind-vote
 date: 2022-08-01
