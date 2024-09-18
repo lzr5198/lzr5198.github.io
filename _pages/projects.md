@@ -31,13 +31,3 @@ author_profile: true
     });
   });
 </script>
-
-<!-- 
-<br />
-
-# Archive
-
-{% for post in site.archive_projects reversed %}
-  {% include archive-single-job-project-award.html %}
-{% endfor %} 
--->
