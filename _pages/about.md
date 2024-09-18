@@ -14,7 +14,7 @@ I am currently a first year MPhil student in Computer Science at the [Hong Kong 
 ## Research
 I am a proud member of the [ALPACAS Research group](https://amir.goharshady.com/group), which is led by my supervisor and focuses its research on Algorithms, Logic, Program Analysis, Cryptocurrencies and Smart contracts.
 
-My research focus lies within the intersection of Cryptography and Blockchain, in which I design and implement secure blockchain protocol by leveraging various cryptographic and game-theoretic tools. I also work on the cryptographic tools themselves to improve their security..
+My research focus lies within the intersection of Cryptography and Blockchain, in which I design and implement secure blockchain protocol by leveraging various cryptographic and game-theoretic tools. I also work on the cryptographic tools themselves to improve their security. Prior to that, I also have numerous project and internship experiences in the AI field
 
 <link rel="stylesheet" type="text/css" href="/assets/css/mystyle.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">

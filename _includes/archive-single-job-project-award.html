@@ -12,108 +12,105 @@
   {% assign title = post.title %}
 {% endif %}
 
-<link rel="stylesheet" type="text/css" href="/assets/css/mystyle.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-<div class="{{ include.type | default: "list" }}__item">
-  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
-    <div class="resume-box">
-      <ul>
-        <li>
-          {% if post.collection == 'jobs' %}
-          <div class="icon">
-            <i class="fa fa-suitcase"></i>
-          </div>
-          {% elsif post.collection == 'projects'%}
-          <div class="icon" style="padding-top: 2px;">
-            <i class="fas fa-project-diagram"></i>
-          </div>
-          {% else %}
-          <div class="icon" style="padding-top: 1px;">
-            <i class="fas fa-award"></i>
-          </div>
-          {% endif %}
-
-          <div class="title-time">
-            
-            <span class="title">
-              <h5>
-                {{ post.name }}
-                {% if post.links != nil %}
-                  {% for link in post.links %}
-                    {% if post.link_types[forloop.index0] == "github" %}
-                      <a href="{{ link }}">
-                        <i class="fa fa-github" style="font-size:24px;"></i>
-                      </a>
-                    {% elsif post.link_types[forloop.index0] == "publication" %}
-                      <a href="{{ link }}">
-                        <i class="fa fa-file-alt" style="font-size:20px;"></i>
-                      </a>
-                    {% elsif post.link_types[forloop.index0] == "certificate" %}
-                      <a href="{{ link }}">
-                        <i class="fas fa-medal" style="font-size:20px;"></i>
-                      </a>
-                    {% elsif post.link_types[forloop.index0] == "link" %}
-                      <a href="{{ link }}">
-                        <i class="fas fa-link"></i>
-                      </a>
-                    {% else %}
-                      <a href="{{ link }}">
-                        <span class="title-link">
-                          [{{ post.link_types[forloop.index0] }}]
-                        </span>
-                      </a>
-                    {% endif %}
-                  {% endfor %}
-                {% endif %}
-              </h5>
-            </span>
-
-
-            <span class="time">
-              {% if post.collection == 'jobs' or post.collection == 'projects' %}
-                {{ post.date | date: "%b %Y" }} - {{ post.end_date | date: "%b %Y" }}
-              {% else %}
-                {{ post.date | date: "%b %Y" }}
-              {% endif %}
-            </span>
+<li>
+  {% if post.collection == 'jobs' or post.collection == 'projects' or post.collection == 'archive_projects'%}
+    <span class="clickableicon">
+      <i class="fas fa-angle-down"></i>
+    </span>
+  {% else %}
+    <span class="icon">
+      <i class="fas fa-dot-circle"></i>
+    </span>
+  {% endif %}
   
 
-          </div>
+  <div class="title-time">
+    
+    <span class="title">
+      <h5>
+        {{ post.name }}
+        {% if post.links != nil %}
+          {% for link in post.links %}
+            {% if post.link_types[forloop.index0] == "github" %}
+              <a href="{{ link }}">
+                <i class="fa fa-github" style="font-size:24px;"></i>
+              </a>
+            {% elsif post.link_types[forloop.index0] == "publication" %}
+              <a href="{{ link }}">
+                <i class="fa fa-file-alt" style="font-size:20px;"></i>
+              </a>
+            {% elsif post.link_types[forloop.index0] == "certificate" %}
+              <a href="{{ link }}">
+                <i class="fas fa-medal" style="font-size:20px;"></i>
+              </a>
+            {% elsif post.link_types[forloop.index0] == "link" %}
+              <a href="{{ link }}">
+                <i class="fas fa-link"></i>
+              </a>
+            {% elsif post.link_types[forloop.index0] == "youtube" %}
+              <a href="{{ link }}">
+                <i class="fa fa-youtube-play"></i>
+              </a>
+            {% elsif post.link_types[forloop.index0] == "video" %}
+              <a href="{{ link }}">
+                <i class="fas fa-video"></i>
+              </a>
+            {% elsif post.link_types[forloop.index0] == "pdf" %}
+              <a href="{{ link }}">
+                <i class="fas fa-file-pdf"></i>
+              </a>
+            {% else %}
+              <a href="{{ link }}">
+                <span class="title-link">
+                  [{{ post.link_types[forloop.index0] }}]
+                </span>
+              </a>
+            {% endif %}
+            &nbsp;
+          {% endfor %}
+        {% endif %}
+      </h5>
+    </span>
 
-          
-          {% if post.place != nil %}
-            <div class="place">@{{ post.place }}</div>
-          {% endif %}
-          {{ post.content }}
-          {% if post.technologies != nil %}
-            <code>{{ post.technologies | join: ' / ' }}</code>
-          {% endif %}
-          
-          <!-- <div>
-            {% for link in post.links %}
-              {% if post.link_names[forloop.index0] == "github" %}
-                <a target="_blank" href="{{ link }}"><i class="fa fa-github" style="font-size:24px; margin-top: 5px"></i></a>
-              {% else %}
-                <a href="{{ link }}">[{{ post.link_names[forloop.index0] }}]</a>
-              {% endif %}
-            {% endfor %}
-          </div> -->
-        </li>
-      </ul>
-    </div>
-  </article>
-</div>
 
-<!-- <script>
-  var post = {
-    details: {{ post.details | jsonify }},
-    links: "{{ post.links | jsonify  }}",
-    link_names: "{{ post.link_names | jsonify  }}",
-  };
+    <span class="time">
+      {% if post.collection == 'jobs' or post.collection == 'projects' or post.collection == 'archive_projects' %}
+        {{ post.date | date: "%b %Y" }} - {{ post.end_date | date: "%b %Y" }}
+      {% else %}
+        {{ post.date | date: "%b %Y" }}
+      {% endif %}
+    </span>
+  </div>
+  <div class="content">
+    {% if post.place != nil %}
+      <div class="place">@{{ post.place }}</div>
+    {% endif %}
 
-  console.log(post.details)
+    {{ post.content }}
 
-</script> -->
+    {% if post.details != nil %}
+      {% for detail in post.details %}
+        <p>&#x2022; {{ detail }}</p>
+      {% endfor %}
+    {% endif %}
+
+  </div>
+  {% if post.technologies != nil %}
+    <code>{{ post.technologies | join: ' / ' }}</code>
+  {% endif %}
+</li>
 
 
+<!-- {% if post.collection == 'jobs' %}
+<span class="clickableicon">
+  <i class="fa fa-suitcase"></i>
+</span>
+{% elsif post.collection == 'projects' or post.collection == 'archive_projects'%}
+<span class="clickableicon" style="padding-top: 2px;">
+  <i class="fas fa-project-diagram"></i>
+</span>
+{% else %}
+<span class="icon" style="padding-top: 1px;">
+  <i class="fas fa-award"></i>
+</span>
+{% endif %} -->

@@ -191,6 +191,9 @@ collections:
   awards:
     output: true
     permalink: /:collection/:path/
+  archive_projects:
+    output: true
+    permalink: /:collection/:path/
   # portfolio:
   #   output: true
   #   permalink: /:collection/:path/
@@ -250,6 +253,15 @@ defaults:
   - scope:
       path: ""
       type: projects
+    values:
+      layout: single
+      author_profile: true
+      share: true
+      comments: true
+  # _projects
+  - scope:
+      path: ""
+      type: archive_projects
     values:
       layout: single
       author_profile: true

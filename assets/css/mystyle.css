@@ -32,6 +32,15 @@
   /* box-shadow: 0 0 1.25rem rgb(211, 209, 209); */
   border-radius: 10px;
 }
+
+.resume-box .content{
+  display: block;
+}
+
+.resume-box .collapsed .content {
+  display: none;
+}
+
 .resume-box ul {
   margin: 0;
   padding: 0px 0px;
@@ -51,10 +60,29 @@
   position: absolute;
   top: 0px;
   left: 20px;
-  border-left: 1px dashed #000000;
+  /* border-left: 1px dashed #000000; */
   bottom: 0;
   /* fc5356 */
 }
+.resume-box .clickableicon {
+  width: 35px;
+  height: 35px;
+  position: absolute;
+  left: 3.5px;
+  top: -2px;
+  color: #000000;
+  /* fc5356 */
+  line-height: 34px;
+  background: #ffffff;
+  text-align: center;
+  z-index: 1;
+  /* border: 1px dashed; */
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+  display: inline-block;
+}
+
 .resume-box .icon {
   width: 35px;
   height: 35px;
@@ -67,9 +95,19 @@
   background: #ffffff;
   text-align: center;
   z-index: 1;
-  border: 1px dashed;
+  /* border: 1px dashed; */
   border-radius: 50%;
+  display: inline-block;
 }
+
+.resume-box .clickableicon i {
+  transition: transform 0.3s ease;
+}
+
+.resume-box .collapsed .clickableicon i {
+  transform: rotate(-90deg); /* Rotate icon 90 degrees when collapsed */
+}
+
 .resume-box .time {
   color: #000000;
   font-size: 16px;
