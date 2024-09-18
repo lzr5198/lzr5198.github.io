@@ -24,9 +24,8 @@ author_profile: true
 <script>
   document.querySelectorAll('.resume-box .clickableicon').forEach(function(icon) {
     icon.addEventListener('click', function() {
-      // let li = this.closest('li');
       let li = icon.parentNode;
-      li.classList.toggle('collapsed'); // Toggle collapsed class on the li element
+      li.classList.toggle('collapsed');
     });
   });
 </script>

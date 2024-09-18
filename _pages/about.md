@@ -14,7 +14,7 @@ I am currently a first year MPhil student in Computer Science at the [Hong Kong 
 ## Research
 I am a proud member of the [ALPACAS Research group](https://amir.goharshady.com/group), which is led by my supervisor and focuses its research on Algorithms, Logic, Program Analysis, Cryptocurrencies and Smart contracts.
 
-My research focus lies within the intersection of Cryptography and Blockchain, in which I design and implement secure blockchain protocol by leveraging various cryptographic and game-theoretic tools. I also work on the cryptographic tools themselves to improve their security. Prior to that, I also have numerous project and internship experiences in the AI field
+My research focus lies within the intersection of Cryptography and Blockchain, in which I design and implement secure blockchain protocol by leveraging various cryptographic and game-theoretic tools. I also work on the cryptographic tools themselves to improve their security. Prior to that, I also have numerous projects and internship experiences in the AI field.
 
 <link rel="stylesheet" type="text/css" href="/assets/css/mystyle.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -31,7 +31,8 @@ My research focus lies within the intersection of Cryptography and Blockchain, i
         <ul>
           <li>
             <div class="icon">
-              <i class="fas fa-user-graduate"></i>
+              <!-- <i class="fas fa-user-graduate"></i> -->
+              <i class="fas fa-dot-circle"></i>
             </div>
             <h5>MPhil in Computer Science</h5>
             <span class="time">Sep 2023 - Present</span>
@@ -41,7 +42,8 @@ My research focus lies within the intersection of Cryptography and Blockchain, i
           </li>
           <li>
             <div class="icon">
-              <i class="fas fa-user-graduate"></i>
+              <!-- <i class="fas fa-user-graduate"></i> -->
+              <i class="fas fa-dot-circle"></i>
             </div>
             <h5>BEng in Computer Engineering</h5>
             <span class="time">Sep 2019 - Jul 2023</span>
@@ -68,7 +70,8 @@ My research focus lies within the intersection of Cryptography and Blockchain, i
         <ul>
           <li>
             <div class="icon">
-              <i class="fas fa-dollar-sign"></i>
+              <!-- <i class="fas fa-dollar-sign"></i> -->
+              <i class="fas fa-dot-circle"></i>
             </div>
             <h5>Postgraduate Studentship</h5>
             <span class="time">Sep 2023 - Present</span>
@@ -94,7 +97,8 @@ My research focus lies within the intersection of Cryptography and Blockchain, i
         <ul>
           <li>
             <div class="icon">
-              <i class="fa fa-globe"></i>
+              <!-- <i class="fa fa-globe"></i> -->
+              <i class="fas fa-dot-circle"></i>
             </div>
             <h5>Subcommittee member</h5>
             <span class="time">Sep 2019 - Feb 2020</span>
