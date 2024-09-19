@@ -9,7 +9,7 @@ redirect_from:
 ---
 
 ## About
-I am currently a year 2 MPhil student in Computer Science at the [Hong Kong University of Science and Technology](https://hkust.edu.hk) (HKUST) supervised by [Amir Goharshady](https://amir.goharshady.com). I also received my Bachelor's degree from HKUST with Computer Engineering as my major and Bid Data Technology as my minor.
+I am currently a year 2 MPhil student in Computer Science at the [Hong Kong University of Science and Technology](https://hkust.edu.hk) (HKUST) supervised by [Amir Goharshady](https://amir.goharshady.com). I also received my Bachelor's degree from HKUST with Computer Engineering as my major and Big Data Technology as my minor.
 
 ## Research
 I am a proud member of the [ALPACAS Research group](https://amir.goharshady.com/group), which is led by my supervisor and focuses its research on Algorithms, Logic, Program Analysis, Cryptocurrencies and Smart contracts.
