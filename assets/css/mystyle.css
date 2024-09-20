@@ -116,7 +116,7 @@
   font-family: 'Courier New', monospace;
 }
 .resume-box h5 {
-  font-weight: 700;
+  /* font-weight: 700; */
   color: #20247b;
   font-size: 20px;
   /* margin-bottom: 10px; */
@@ -168,8 +168,13 @@
 }
 
 .title-time .title h5 a{
-  display: inline-block;;
+  display: inline-block;
   text-align: center;
+}
+
+.link-icon {
+  font-size: 24px;
+  padding: 0px 2px 0px 2px;
 }
 
 

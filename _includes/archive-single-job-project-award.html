@@ -31,41 +31,41 @@
         {% if post.links != nil %}
           {% for link in post.links %}
             {% if post.link_types[forloop.index0] == "github" %}
-              <a href="{{ link }}">
-                <i class="fa fa-github" style="font-size:24px;"></i>
+              <a href="{{ link }}" class="link-icon">
+                <i class="fa fa-github"></i>
               </a>
             {% elsif post.link_types[forloop.index0] == "publication" %}
-              <a href="{{ link }}">
-                <i class="fa fa-file-alt" style="font-size:20px;"></i>
+              <a href="{{ link }}" class="link-icon">
+                <i class="fa fa-file-alt"></i>
               </a>
             {% elsif post.link_types[forloop.index0] == "certificate" %}
-              <a href="{{ link }}">
-                <i class="fas fa-medal" style="font-size:20px;"></i>
+              <a href="{{ link }}" class="link-icon">
+                <i class="fas fa-medal"></i>
               </a>
             {% elsif post.link_types[forloop.index0] == "link" %}
-              <a href="{{ link }}">
+              <a href="{{ link }}" class="link-icon">
                 <i class="fas fa-link"></i>
               </a>
             {% elsif post.link_types[forloop.index0] == "youtube" %}
-              <a href="{{ link }}">
+              <a href="{{ link }}" class="link-icon">
                 <i class="fa fa-youtube-play"></i>
               </a>
             {% elsif post.link_types[forloop.index0] == "video" %}
-              <a href="{{ link }}">
+              <a href="{{ link }}" class="link-icon">
                 <i class="fas fa-video"></i>
               </a>
             {% elsif post.link_types[forloop.index0] == "pdf" %}
-              <a href="{{ link }}">
+              <a href="{{ link }}" class="link-icon">
                 <i class="fas fa-file-pdf"></i>
               </a>
             {% else %}
-              <a href="{{ link }}">
+              <a href="{{ link }}" class="link-icon">
                 <span class="title-link">
                   [{{ post.link_types[forloop.index0] }}]
                 </span>
               </a>
             {% endif %}
-            &nbsp;
+            <!-- &nbsp; -->
           {% endfor %}
         {% endif %}
       </h5>
