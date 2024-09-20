@@ -6,7 +6,7 @@ date: 2023-02-01
 end_date: 2023-05-01
 place:
 technologies: ["RSA", "Goldwasser-Micali Cryptosystem", "Homomorphic Encryption", "Ethereum"]
-details: ["Implemented a protocol which allows truly uniformly random number to be generated on blockchain by leveraging RSA and Goldwasser-Micali cryptosystem.", "The number is tamper-proof and secret until it is generated and finalized."]
+details: ["Implemented a tamper-proof protocol for generating truly uniform random numbers on Ethereum by leveraging RSA, Goldwasser-Micali cryptosystem, and a secret sharing scheme.", "The generated numbers are tamper-proof and remain secret until they are finalized."]
 links: ["https://github.com/lzr5198/3-party-RNG"]
 link_types: ["github"]
 ---
