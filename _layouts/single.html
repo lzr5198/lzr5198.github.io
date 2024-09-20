@@ -52,6 +52,8 @@ layout: default
       <section class="page__content" itemprop="text">
         {% if page.citation and page.paperurl and page.slidesurl %}
           <p style="font-size: smaller">Recommended citation: {{ page.citation }}<br /><a target="_blank" href="{{ page.paperurl }}">Download Paper</a> | <a target="_blank" href="{{ page.slidesurl }}">Download Slides</a></p>
+        {% elsif page.citation and page.paperurl and page.doi%}
+          <p style="font-size: smaller">Recommended citation: {{ page.citation }}<br />DOI: {{ page.doi }}<br /><a target="_blank" href="{{ page.paperurl }}">Download Paper</a></p>
         {% elsif page.citation and page.paperurl %}
           <p style="font-size: smaller">Recommended citation: {{ page.citation }}<br /><a target="_blank" href="{{ page.paperurl }}">Download Paper</a></p>
         {% elsif page.citation and page.slidesurl %}

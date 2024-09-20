@@ -6,7 +6,7 @@ date: 2022-08-01
 end_date: 2023-05-01
 place: 
 technologies: ["CNN", "Yolov5", "cv2", "Django"]
-details: ["Worked with the FYP team members to design and implement a Vacancy Detection System for smart carpark. It achieves an accuracy of 91% and shows no false detection when tested in a real world setting."]
+details: ["Collaborated with FYP team members to design and implement a Vacancy Detection System for a smart car park, achieving 91% accuracy with no false detections in real-world testing.", "The system utilizes transfer learning, CNN, and YOLOv5, and achieves a wider detection angle than industry standards by incorporating a fisheye camera and an undistortion algorithm."]
 links: ["https://github.com/lzr5198/carpark-vacancy-detection-system", "https://www.youtube.com/watch?v=KC4RcZ52hQg", "/files/smart-carpark-report.pdf", "https://cse.hkust.edu.hk/ug/fyp/bestfyp/#year2022-2023"]
 link_types: ["github", "youtube", "pdf", "See more"]
 ---
