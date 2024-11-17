@@ -2,7 +2,7 @@
 name: "Professor Samuel Chanson Best FYP Award"
 collection: awards
 # permalink: /awards/blind-vote
-date: 2023-06-1
+date: 2023-06-01
 end_date: 
 place: "HKUST"
 technologies:
