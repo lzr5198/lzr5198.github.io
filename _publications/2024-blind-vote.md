@@ -7,7 +7,7 @@ term: "Summer"
 venue: 'IEEE Blockchain'
 paperurl: '/files/blind-vote.pdf'
 authors: 'Amir K. Goharshady, Zhaorun Lin'
-under_review: false
+status: 2 # 0: under review 1: accepted in press 2: published
 index_terms: ['Electronic Voting', 'Blind Signatures', 'Smart Contracts']
 # excerpt: 'This paper is about the number 1. The number 2 is left for future work.'
 # doi: "10.1109/Blockchain62396.2024.00016"

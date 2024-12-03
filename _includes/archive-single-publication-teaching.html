@@ -25,8 +25,11 @@
           <h5 class="title">
             {% if post.collection == 'publications' %}
             <a href="{{ base_path }}{{ post.url }}">{{ title }}</a>
-              {% if post.under_review %}
+              {% if post.status == 0 %}
                 <p style="color: red; display: inline; font-size: 14px;">(Under review)</p>
+              {% endif %}
+              {% if post.status == 1 %}
+                <p style="color: red; display: inline; font-size: 14px;">(Accepted in press)</p>
               {% endif %}
             {% else %}
               {% if post.details == true %}
