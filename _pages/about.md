@@ -9,10 +9,10 @@ redirect_from:
 ---
 
 ## About
-I am currently a year 2 MPhil student in Computer Science at [Hong Kong University of Science and Technology](https://hkust.edu.hk) (HKUST) co-supervised by [Amir Goharshady](https://amir.goharshady.com) and [Jiasi Shen](https://shenjiasi.com). I also received my Bachelor's degree from HKUST with Computer Engineering as my major and Big Data Technology as my minor.
+I am currently a year 2 MPhil student in Computer Science at [Hong Kong University of Science and Technology](https://hkust.edu.hk) (HKUST) co-supervised by [Amir Goharshady](https://amir.goharshady.com). I also received my Bachelor's degree from HKUST with Computer Engineering as my major and Big Data Technology as my minor.
 
 ## Research
-I am a proud member of the [ALPACAS Research group](https://amir.goharshady.com/group), which is led by my supervisor and focuses its research on Algorithms, Logic, Program Analysis, Cryptocurrencies and Smart contracts.
+I am a member of the [ALPACAS Research group](https://amir.goharshady.com/group), which is led by my supervisor and focuses its research on Algorithms, Logic, Program Analysis, Cryptocurrencies and Smart contracts.
 
 My research focus lies within the intersection of Cryptography and Blockchain, in which I design and implement secure blockchain protocol by leveraging various cryptographic and game-theoretic tools. I also work on the cryptographic tools themselves to improve their security. Besides that, I'm also interested in and have numerous projects and internship experiences related to AI and software engineering.
 
