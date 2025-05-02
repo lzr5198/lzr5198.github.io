@@ -13,7 +13,7 @@
 {% endif %}
 
 <li>
-  {% if post.collection == 'jobs' or post.collection == 'projects' or post.collection == 'archive_projects'%}
+  {% if post.collection == 'jobs' or post.collection == 'jobs_zh' or post.collection == 'projects' or post.collection == 'projects_zh' or post.collection == 'archive_projects'%}
     <span class="clickableicon">
       <i class="fas fa-angle-down"></i>
     </span>
@@ -73,7 +73,7 @@
 
 
     <span class="time">
-      {% if post.collection == 'jobs' or post.collection == 'projects' or post.collection == 'archive_projects' %}
+      {% if post.collection == 'jobs' or post.collection == 'jobs_zh' or post.collection == 'projects' or post.collection == 'projects_zh' or post.collection == 'archive_projects' %}
         {{ post.date | date: "%b %Y" }} - {{ post.end_date | date: "%b %Y" }}
       {% else %}
         {{ post.date | date: "%b %Y" }}

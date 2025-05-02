@@ -1,0 +1,114 @@
+---
+permalink: /zh/
+title: "Zhaorun Lin 林昭潤 (Kevin)"
+excerpt: "About me"
+author_profile: true
+layout: archive
+redirect_from: 
+  - /zh/about/
+  - /zh/about.html
+---
+
+## 简介
+I am currently a year 2 MPhil student in Computer Science at [Hong Kong University of Science and Technology](https://hkust.edu.hk) (HKUST) supervised by [Amir Goharshady](https://amir.goharshady.com). I also received my Bachelor's degree from HKUST with Computer Engineering as my major and Big Data Technology as my minor.
+
+## 研究
+I am a member of the [ALPACAS Research group](https://amir.goharshady.com/group), which is led by my supervisor and focuses its research on Algorithms, Logic, Program Analysis, Cryptocurrencies and Smart contracts.
+
+My research focus lies within the intersection of Cryptography and Blockchain, in which I design and implement secure blockchain protocol by leveraging various cryptographic and game-theoretic tools. I also work on the cryptographic tools themselves to improve their security. Besides that, I'm also interested in and have numerous projects and internship experiences related to AI and software engineering.
+
+<link rel="stylesheet" type="text/css" href="/assets/css/mystyle.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<section class="section gray-bg" id="resume">
+  <div class="container">
+    <div>
+      <div class="section-title">
+        <h2>教育经历</h2>
+      </div>
+    </div>
+    <div>
+      <div class="resume-box">
+        <ul>
+          <li>
+            <div class="icon">
+              <!-- <i class="fas fa-user-graduate"></i> -->
+              <i class="fas fa-dot-circle"></i>
+            </div>
+            <h5>MPhil in Computer Science</h5>
+            <span class="time">Sep 2023 - Present</span>
+            <div class="place">@HKUST</div>
+            <p>&#x2022; Co-supervised by Prof. Amir K. Goharshady and Prof. Jiasi Shen</p>
+            <p>&#x2022; A member of the ALPACAS Research Group</p> 
+          </li>
+          <li>
+            <div class="icon">
+              <!-- <i class="fas fa-user-graduate"></i> -->
+              <i class="fas fa-dot-circle"></i>
+            </div>
+            <h5>BEng in Computer Engineering</h5>
+            <span class="time">Sep 2019 - Jul 2023</span>
+            <div class="place">@HKUST</div>
+            <p>&#x2022; Minor in Big Data Technology</p>
+            <p>&#x2022; Awarded the 2019-2020 HKUST School of Engineering Scholarship</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Fellowships -->
+<section class="section gray-bg" id="resume">
+  <div class="container">
+    <div>
+      <div class="section-title">
+        <h2>奖学金</h2>
+      </div>
+    </div>
+    <div>
+      <div class="resume-box">
+        <ul>
+          <li>
+            <div class="icon">
+              <!-- <i class="fas fa-dollar-sign"></i> -->
+              <i class="fas fa-dot-circle"></i>
+            </div>
+            <h5>Postgraduate Studentship</h5>
+            <span class="time">Sep 2023 - Present</span>
+            <div class="place">@HKUST</div>
+            <p>HK$18390/month</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Extracurricular activities -->
+<section class="section gray-bg" id="resume">
+  <div class="container">
+    <div>
+      <div class="section-title">
+        <h2>课外活动</h2>
+      </div>
+    </div>
+    <div>
+      <div class="resume-box">
+        <ul>
+          <li>
+            <div class="icon">
+              <!-- <i class="fa fa-globe"></i> -->
+              <i class="fas fa-dot-circle"></i>
+            </div>
+            <h5>Subcommittee member</h5>
+            <span class="time">Sep 2019 - Feb 2020</span>
+            <div class="place">@China Entrepreneur Network (HKUST Chapter)</div>
+            <p>&#x2022; China Entrepreneur Network (CEN) is an organization that nurtures students from all disciplines to become leaders and entrepreneurs for a sustainable future. It is a welcoming society that embraces students from all regions and have four other chapters in the U.S. and Australia.</p>
+            <p>&#x2022; Held events and workshops that invite professionals from various fields to share their experiences in startups and entrepreneurship.</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>

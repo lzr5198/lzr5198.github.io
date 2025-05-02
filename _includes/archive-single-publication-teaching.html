@@ -23,7 +23,7 @@
           </div>
 
           <h5 class="title">
-            {% if post.collection == 'publications' %}
+            {% if post.collection == 'publications' or post.collection == 'publications_zh' %}
             <a href="{{ base_path }}{{ post.url }}">{{ title }}</a>
               {% if post.status == 0 %}
                 <p style="color: red; display: inline; font-size: 14px;">(Under review)</p>
@@ -35,8 +35,6 @@
               {% if post.details == true %}
                 <a href="{{ base_path }}{{ post.url }}">{{ title }}</a>
               {% else %}
-                
-
                 <div class="title-time">
                   <span class="title">
                     <h5>
@@ -51,7 +49,7 @@
             {% endif %}
           </h5>
 
-          {% if post.collection == 'publications' %}
+          {% if post.collection == 'publications' or post.collection == 'publications_zh' %}
             <div class="place">
               <i>{{ post.venue }}</i>, {{ post.date | date: "%Y" }}
             </div>

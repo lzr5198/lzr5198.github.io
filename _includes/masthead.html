@@ -1,4 +1,4 @@
-{% include base_path %}
+<!-- {% include base_path %}
 
 <div class="masthead">
   <div class="masthead__inner-wrap">
@@ -15,6 +15,87 @@
             {% endif %}
             <li class="masthead__menu-item"><a href="{{ domain }}{{ link.url }}">{{ link.title }}</a></li>
           {% endfor %}
+        </ul>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div> -->
+
+
+
+
+{% include base_path %}
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav" style="display: flex; justify-content: space-between; align-items: center;">
+        <button><div class="navicon"></div></button>
+        <ul class="visible-links">
+          
+          
+          {%- assign url_prefix = page.url | slice: 0, 4 -%}
+          {%- assign is_cn = false -%}
+          {%- if url_prefix == '/zh/' -%}
+          {%- assign is_cn = true -%}
+          {%- endif -%}
+          <li class="masthead__menu-item masthead__menu-item--lg">
+            {%- if is_cn -%}
+              <a href="{{ base_path }}/zh/">林昭润</a>
+            {%- else -%}
+              <a href="{{ base_path }}/">{{ site.title }}</a>
+            {%- endif -%}
+          </li>
+
+          {%- assign lang_prefix = '' -%}
+          {%- if is_cn -%}
+            {%- assign lang_prefix = 'zh' -%}
+          {%- endif -%}
+
+          {% for link in site.data.navigation.main %}
+            {% assign full_url = link.url %}
+
+            {% unless link.url contains 'http' %}
+                {% assign full_url = lang_prefix | append: link.url %}
+                <!-- {% assign full_url = full_url | replace: '//', '/' %} -->
+            {% endunless %}
+
+            {% assign display_title = link.title %}
+            {% if is_cn %}
+              {% case link.title %}
+                {% when 'Publications' %}
+                  {% assign display_title = '论文' %}
+                {% when 'Projects' %}
+                  {% assign display_title = '项目' %}
+                {% when 'Job Experiences' %}
+                  {% assign display_title = '工作经历' %}
+                {% when 'Awards' %}
+                  {% assign display_title = '奖项' %}
+                {% when 'TAs' %}
+                  {% assign display_title = '助教经历' %}
+              {% endcase %}
+            {% endif %}
+          
+            
+            <li class="masthead__menu-item">
+              <a href="{{ full_url | relative_url }}">{{ display_title }}</a>
+            </li>
+          {% endfor %}
+
+
+
+        </ul>
+        <ul class="visible-links" style="margin-left: auto; display: flex; list-style: none; margin: 0; padding: 0;">
+          {% if is_cn %}
+            <li class="masthead__menu-item" style="margin-left: auto; display: flex; list-style: none; margin: 0; padding: 0;">
+              <a href="{{ page.url | remove_first: '/zh' | relative_url }}">EN</a>
+            </li>
+          {% else %}
+            <li class="masthead__menu-item" style="margin-left: auto; display: flex; list-style: none; margin: 0; padding: 0;">
+              <a href="{{ 'zh' | append: page.url | relative_url }}">CN</a>
+            </li>
+          {% endif %}
         </ul>
         <ul class="hidden-links hidden"></ul>
       </nav>

@@ -81,9 +81,12 @@ analytics:
 # Site Author
 author:
   name             : "Zhaorun Lin"
+  name_zh          : "林昭润"
   avatar           : "profile.png"
   bio              : "An MPhil student in Computer Science @ Hong Kong University of Science and Technology"
+  bio_zh           : "香港科技大学MPhil二年级计算机科学专业的学生"
   location         : "Hong Kong"
+  location_zh      : "香港"
   employer         :
   pubmed           : 
   googlescholar    : "https://scholar.google.com/citations?user=FBw2XGUAAAAJ&hl=en"
@@ -103,6 +106,7 @@ author:
   impactstory      : #"https://profiles.impactstory.org/u/xxxx-xxxx-xxxx-xxxx"
   lastfm           :
   linkedin         : "lzrun/"
+  linkedin_zh      : "lzrun/"
   orcid            : "https://orcid.org/0009-0005-8925-6575"
   pinterest        :
   soundcloud       :
@@ -200,6 +204,24 @@ collections:
   talks:
     output: true
     permalink: /:collection/:path/
+  zh:
+    output: true
+    permalink: /:collection/:path/
+  publications_zh:
+    output: true
+    permalink: /zh/publications/:path/
+  awards_zh:
+    output: true
+    permalink: /zh/awards/:path/
+  jobs_zh:
+    output: true
+    permalink: /zh/jobs/:path/
+  projects_zh:
+    output: true
+    permalink: /zh/projects/:path/
+  teaching_zh:
+    output: true
+    permalink: /zh/teaching/:path/
 
 
 # Defaults
@@ -293,6 +315,60 @@ defaults:
       layout: talk
       author_profile: true
       share: true
+  # publications_zh
+  - scope:
+      path: ""
+      type: publications_zh
+    values:
+      layout: single
+      author_profile: true
+      share: true
+      comments: true
+  # teaching_zh
+  - scope:
+      path: ""
+      type: teaching_zh
+    values:
+      layout: single
+      author_profile: true
+      share: true
+      comments: true
+  # projects_zh
+  - scope:
+      path: ""
+      type: projects_zh
+    values:
+      layout: single
+      author_profile: true
+      share: true
+      comments: true
+  # jobs_zh
+  - scope:
+      path: ""
+      type: jobs_zh
+    values:
+      layout: single
+      author_profile: true
+      share: true
+      comments: true
+  # awards_zh
+  - scope:
+      path: ""
+      type: awards_zh
+    values:
+      layout: single
+      author_profile: true
+      share: true
+      comments: true
+  # zh
+  - scope:
+      path: ""
+      type: zh
+    values:
+      layout: default
+      author_profile: true
+      share: true
+      comments: true
 
 # Sass/SCSS
 sass:
