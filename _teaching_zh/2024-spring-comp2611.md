@@ -1,5 +1,5 @@
 ---
-title: "测试Computer Organization"
+title: "计算机组织"
 collection: teaching_zh
 type: "Undergraduate course"
 permalink: /zh/teaching/2024-spring-comp2611

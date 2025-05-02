@@ -23,13 +23,21 @@
           </div>
 
           <h5 class="title">
-            {% if post.collection == 'publications' or post.collection == 'publications_zh' %}
+            {% if post.collection == 'publications' %}
             <a href="{{ base_path }}{{ post.url }}">{{ title }}</a>
               {% if post.status == 0 %}
                 <p style="color: red; display: inline; font-size: 14px;">(Under review)</p>
               {% endif %}
               {% if post.status == 1 %}
                 <p style="color: red; display: inline; font-size: 14px;">(Accepted in press)</p>
+              {% endif %}
+            {% elsif post.collection == 'publications_zh' %}
+            <a href="{{ base_path }}{{ post.url }}">{{ title }}</a>
+              {% if post.status == 0 %}
+                <p style="color: red; display: inline; font-size: 14px;">（正在审核）</p>
+              {% endif %}
+              {% if post.status == 1 %}
+                <p style="color: red; display: inline; font-size: 14px;">（已接受）</p>
               {% endif %}
             {% else %}
               {% if post.details == true %}

@@ -5,8 +5,8 @@ collection: jobs_zh
 date: 2022-07-01
 end_date: 2022-09-01
 place: "Baronford & Associates"
-technologies: ["EDA", "Data Augmentation", "K-means Clustering", "Classification", "CRUD", "MERN Stack"]
-details: ["Collaborated in an agile environment to develop various systems, models, and data pipelines for a comprehensive patient record system.", "Performed exploratory data analysis and implemented a MERN stack application for data visualization and display."]
+technologies: ["EDA", "数据增强", "K均值聚类算法", "CRUD", "MERN 栈"]
+details: ["协作开发了多个系统、模型和数据管道，用于构建一个全面的患者记录系统。", "进行了探索性数据分析，并实现了一个基于 MERN 栈的网络应用程序作于数据可视化与应用展示。"]
 links: 
 link_types: 
 ---

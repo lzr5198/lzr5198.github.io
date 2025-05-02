@@ -37,7 +37,7 @@ My research focus lies within the intersection of Cryptography and Blockchain, i
             <h5>MPhil in Computer Science</h5>
             <span class="time">Sep 2023 - Present</span>
             <div class="place">@HKUST</div>
-            <p>&#x2022; Co-supervised by Prof. Amir K. Goharshady and Prof. Jiasi Shen</p>
+            <p>&#x2022; Supervised by Prof. Amir K. Goharshady</p>
             <p>&#x2022; A member of the ALPACAS Research Group</p> 
           </li>
           <li>
@@ -58,7 +58,7 @@ My research focus lies within the intersection of Cryptography and Blockchain, i
 </section>
 
 <!-- Fellowships -->
-<section class="section gray-bg" id="resume">
+<!-- <section class="section gray-bg" id="resume">
   <div class="container">
     <div>
       <div class="section-title">
@@ -70,7 +70,6 @@ My research focus lies within the intersection of Cryptography and Blockchain, i
         <ul>
           <li>
             <div class="icon">
-              <!-- <i class="fas fa-dollar-sign"></i> -->
               <i class="fas fa-dot-circle"></i>
             </div>
             <h5>Postgraduate Studentship</h5>
@@ -82,10 +81,10 @@ My research focus lies within the intersection of Cryptography and Blockchain, i
       </div>
     </div>
   </div>
-</section>
+</section> -->
 
 <!-- Extracurricular activities -->
-<section class="section gray-bg" id="resume">
+<!-- <section class="section gray-bg" id="resume">
   <div class="container">
     <div>
       <div class="section-title">
@@ -97,7 +96,6 @@ My research focus lies within the intersection of Cryptography and Blockchain, i
         <ul>
           <li>
             <div class="icon">
-              <!-- <i class="fa fa-globe"></i> -->
               <i class="fas fa-dot-circle"></i>
             </div>
             <h5>Subcommittee member</h5>
@@ -110,4 +108,4 @@ My research focus lies within the intersection of Cryptography and Blockchain, i
       </div>
     </div>
   </div>
-</section>
+</section> -->

@@ -10,12 +10,12 @@ redirect_from:
 ---
 
 ## 简介
-I am currently a year 2 MPhil student in Computer Science at [Hong Kong University of Science and Technology](https://hkust.edu.hk) (HKUST) supervised by [Amir Goharshady](https://amir.goharshady.com). I also received my Bachelor's degree from HKUST with Computer Engineering as my major and Big Data Technology as my minor.
+我目前是[香港科技大学](https://hkust.edu.hk)（HKUST）计算机科学专业的二年级MPhil研究生，导师是 [Amir Goharshady](https://amir.goharshady.com) 教授。此外，我也在香港科技大学完成了本科学业，主修计算机工程，辅修大数据技术。
 
 ## 研究
-I am a member of the [ALPACAS Research group](https://amir.goharshady.com/group), which is led by my supervisor and focuses its research on Algorithms, Logic, Program Analysis, Cryptocurrencies and Smart contracts.
+我 ALPACAS 研究小组的一名成员，该小组由我的导师带领，研究方向涵盖算法、逻辑、程序分析、加密货币和智能合约。
 
-My research focus lies within the intersection of Cryptography and Blockchain, in which I design and implement secure blockchain protocol by leveraging various cryptographic and game-theoretic tools. I also work on the cryptographic tools themselves to improve their security. Besides that, I'm also interested in and have numerous projects and internship experiences related to AI and software engineering.
+我的研究重点是密码学，区块链，以及他们的交叉领域，致力于利用各种如密码学及博弈论的理论工具设计并实现安全的区块链协议。同时，我也致力于提升密码学工具本身的安全性。除此之外，我也对人工智能充满兴趣，并拥有多个相关项目和实习经验。
 
 <link rel="stylesheet" type="text/css" href="/assets/css/mystyle.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -35,22 +35,22 @@ My research focus lies within the intersection of Cryptography and Blockchain, i
               <!-- <i class="fas fa-user-graduate"></i> -->
               <i class="fas fa-dot-circle"></i>
             </div>
-            <h5>MPhil in Computer Science</h5>
-            <span class="time">Sep 2023 - Present</span>
+            <h5>MPhil - 计算机科学</h5>
+            <span class="time">Sep 2023 - 现在</span>
             <div class="place">@HKUST</div>
-            <p>&#x2022; Co-supervised by Prof. Amir K. Goharshady and Prof. Jiasi Shen</p>
-            <p>&#x2022; A member of the ALPACAS Research Group</p> 
+            <p>&#x2022; 导师为 Prof. Amir K. Goharshady</p>
+            <p>&#x2022; ALPACAS 研究小组成员</p>
           </li>
           <li>
             <div class="icon">
               <!-- <i class="fas fa-user-graduate"></i> -->
               <i class="fas fa-dot-circle"></i>
             </div>
-            <h5>BEng in Computer Engineering</h5>
+            <h5>BEng - 计算机工程</h5>
             <span class="time">Sep 2019 - Jul 2023</span>
             <div class="place">@HKUST</div>
-            <p>&#x2022; Minor in Big Data Technology</p>
-            <p>&#x2022; Awarded the 2019-2020 HKUST School of Engineering Scholarship</p>
+            <p>&#x2022; 辅修大数据科学</p>
+            <p>&#x2022; 荣获2019-2020香港科技大学工学院奖学金</p>
           </li>
         </ul>
       </div>
@@ -59,7 +59,7 @@ My research focus lies within the intersection of Cryptography and Blockchain, i
 </section>
 
 <!-- Fellowships -->
-<section class="section gray-bg" id="resume">
+<!-- <section class="section gray-bg" id="resume">
   <div class="container">
     <div>
       <div class="section-title">
@@ -71,22 +71,21 @@ My research focus lies within the intersection of Cryptography and Blockchain, i
         <ul>
           <li>
             <div class="icon">
-              <!-- <i class="fas fa-dollar-sign"></i> -->
               <i class="fas fa-dot-circle"></i>
             </div>
-            <h5>Postgraduate Studentship</h5>
-            <span class="time">Sep 2023 - Present</span>
+            <h5>研究生奖学金</h5>
+            <span class="time">Sep 2023 - 现在</span>
             <div class="place">@HKUST</div>
-            <p>HK$18390/month</p>
+            <p>HK$18390/月</p>
           </li>
         </ul>
       </div>
     </div>
   </div>
-</section>
+</section> -->
 
 <!-- Extracurricular activities -->
-<section class="section gray-bg" id="resume">
+<!-- <section class="section gray-bg" id="resume">
   <div class="container">
     <div>
       <div class="section-title">
@@ -98,17 +97,16 @@ My research focus lies within the intersection of Cryptography and Blockchain, i
         <ul>
           <li>
             <div class="icon">
-              <!-- <i class="fa fa-globe"></i> -->
               <i class="fas fa-dot-circle"></i>
             </div>
-            <h5>Subcommittee member</h5>
+            <h5>附属委员会成员</h5>
             <span class="time">Sep 2019 - Feb 2020</span>
-            <div class="place">@China Entrepreneur Network (HKUST Chapter)</div>
-            <p>&#x2022; China Entrepreneur Network (CEN) is an organization that nurtures students from all disciplines to become leaders and entrepreneurs for a sustainable future. It is a welcoming society that embraces students from all regions and have four other chapters in the U.S. and Australia.</p>
-            <p>&#x2022; Held events and workshops that invite professionals from various fields to share their experiences in startups and entrepreneurship.</p>
+            <div class="place">@中华创新与创业联盟（HKUST 分部）</div>
+            <p>&#x2022; 中华创新与创业联盟是一个致力于培养各学科学生成为可持续未来的领导者与创业者的组织。该组织欢迎来自各地的学生加入，并在美国和澳大利亚设有四个分会。</p>
+            <p>&#x2022; 举办活动与工作坊，邀请来自各领域的专业人士分享他们在创业与初创公司的经验。</p>
           </li>
         </ul>
       </div>
     </div>
   </div>
-</section>
+</section> -->
