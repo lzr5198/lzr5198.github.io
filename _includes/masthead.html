@@ -33,8 +33,7 @@
       <nav id="site-nav" class="greedy-nav" style="display: flex; justify-content: space-between; align-items: center;">
         <button><div class="navicon"></div></button>
         <ul class="visible-links">
-          
-          
+        <!-- <ul class="visible-links" style="display: flex; align-items: center; flex-wrap: wrap; width: 100%;"> -->
           {%- assign url_prefix = page.url | slice: 0, 4 -%}
           {%- assign is_cn = false -%}
           {%- if url_prefix == '/zh/' -%}
@@ -58,7 +57,6 @@
 
             {% unless link.url contains 'http' %}
                 {% assign full_url = lang_prefix | append: link.url %}
-                <!-- {% assign full_url = full_url | replace: '//', '/' %} -->
             {% endunless %}
 
             {% assign display_title = link.title %}
@@ -82,18 +80,15 @@
               <a href="{{ full_url | relative_url }}">{{ display_title }}</a>
             </li>
           {% endfor %}
-
-
-
         </ul>
         <ul class="visible-links" style="margin-left: auto; display: flex; list-style: none; margin: 0; padding: 0;">
           {% if is_cn %}
-            <li class="masthead__menu-item" style="margin-left: auto; display: flex; list-style: none; margin: 0; padding: 0;">
-              <a href="{{ page.url | remove_first: '/zh' | relative_url }}">EN</a>
+            <li class="masthead__menu-item">
+              <a href="{{ page.url | remove_first: '/zh' | relative_url }}">英文</a>
             </li>
           {% else %}
-            <li class="masthead__menu-item" style="margin-left: auto; display: flex; list-style: none; margin: 0; padding: 0;">
-              <a href="{{ 'zh' | append: page.url | relative_url }}">CN</a>
+            <li class="masthead__menu-item">
+              <a href="{{ 'zh' | append: page.url | relative_url }}">Chinese</a>
             </li>
           {% endif %}
         </ul>

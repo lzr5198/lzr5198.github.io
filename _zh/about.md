@@ -3,7 +3,7 @@ permalink: /zh/
 title: "Zhaorun Lin 林昭潤 (Kevin)"
 excerpt: "About me"
 author_profile: true
-layout: archive
+layout: single
 redirect_from: 
   - /zh/about/
   - /zh/about.html
