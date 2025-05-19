@@ -7,7 +7,7 @@ term: "Spring"
 venue: 'FSEN'
 paperurl: '/files/super-opt.pdf'
 authors: 'Togzhan Barakbayeva, Soroush Farokhnia, Amir K. Goharshady, Pingjiang Li, Zhaorun Lin'
-status: 1 # 0: under review 1: accepted in press 2: published
+status: 2 # 0: under review 1: accepted in press 2: published
 index_terms: ['Smart Contracts', 'Compiler Optimization', 'Blockchain']
 # excerpt: 'This paper is about the number 1. The number 2 is left for future work.'
 # doi: "10.1109/Blockchain62396.2024.00016"
