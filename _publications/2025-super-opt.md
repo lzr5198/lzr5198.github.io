@@ -10,8 +10,8 @@ authors: 'Togzhan Barakbayeva, Soroush Farokhnia, Amir K. Goharshady, Pingjiang 
 status: 2 # 0: under review 1: accepted in press 2: published
 index_terms: ['Smart Contracts', 'Compiler Optimization', 'Blockchain']
 # excerpt: 'This paper is about the number 1. The number 2 is left for future work.'
-# doi: "10.1109/Blockchain62396.2024.00016"
-# citation: 'A. K. Goharshady and Z. Lin, "Blind Vote: Economical and Secret Blockchain-Based Voting," 2024 IEEE International Conference on Blockchain (Blockchain), Copenhagen, Denmark, 2024, pp. 46-53, doi: 10.1109/Blockchain62396.2024.00016.'
+doi: "https://doi.org/10.1007/978-3-031-87054-5_1"
+citation: 'T. Barakbayeva, S. Farokhnia, A. K. Goharshady, P. Li, Z. Lin Improved Gas Optimization of Smart Contracts. In 11th International Conference on Fundamentals of Software Engineering (FSEN), 2025.'
 ---
 **Abstract** — Smart contracts are programs executed on top of a blockchain consensus protocol. Their compiled code (bytecode) is stored on the blockchain and is immutable after deployment. They are self-enforcing in the sense that any function call to a smart contract is executed by all nodes on the network, ensuring that they all reach consensus about the final state of the contract. To prevent denial-of-service attacks, such an execution is costly by design. A "gas" cost is assigned to each bytecode operation, roughly proportional to the resources required to execute it, and any user who initiates a function call to a smart contract has to pay the total gas cost of the resulting execution. On Ethereum alone, the users pay an astounding gas cost of more than 4 billion USD/year.
 
