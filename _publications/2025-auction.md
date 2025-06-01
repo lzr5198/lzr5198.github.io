@@ -5,7 +5,7 @@ permalink: /publications/2025-auction
 date: 2025-06-16
 term: "Summer"
 venue: 'PODC'
-# paperurl: '/files/auction.pdf'
+paperurl: '/files/auction.pdf'
 authors: 'Jonas Ballweg, Amir K. Goharshady, Zhaorun Lin'
 status: 1 # 0: under review 1: accepted in press 2: published
 index_terms: ['Smart Contracts', 'Blockchain', 'Auction']
