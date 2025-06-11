@@ -47,7 +47,7 @@ layout: default
           {% elsif page.collection == 'publications' and page.status == 1 %}
             <p>Accepted in <i>{{ page.venue }}</i>, {{ page.date | default: "1900-01-01" | date: "%Y" }} </p>
           {% elsif page.collection == 'publications_zh' and page.status == 1 %}
-            <p>已被 <i>{{ page.venue }}</i>, {{ page.date | default: "1900-01-01" | date: "%Y" }} 接受</p>
+            <p>已在 <i>{{ page.venue }}</i>, {{ page.date | default: "1900-01-01" | date: "%Y" }} 被接受</p>
           {% elsif page.collection == 'publications' and page.status == 2 %}
             <p>Published in <i>{{ page.venue }}</i>, {{ page.date | default: "1900-01-01" | date: "%Y" }} </p>
           {% elsif page.collection == 'publications_zh' and page.status == 2 %}
