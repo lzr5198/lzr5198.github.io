@@ -24,9 +24,11 @@
   <div class="author__content">
     {%- if is_cn -%}
       <h3 class="author__name">{{ author.name_zh }}</h3>
+      <h6 style="margin-top: 10px;">年龄: <span id="age-counter">0</span> 岁</h6>
       {% if author.bio_zh %}<p class="author__bio">{{ author.bio_zh }}</p>{% endif %}
     {%- else -%}
       <h3 class="author__name">{{ author.name }}</h3>
+      <h6 style="margin-top: 10px;">Age: <span id="age-counter">0</span> years</h6>
       {% if author.bio %}<p class="author__bio">{{ author.bio }}</p>{% endif %}
     {%- endif -%}
   </div>
@@ -148,3 +150,5 @@
     </ul>
   </div>
 </div>
+
+<script src="{{ '/assets/js/age-counter.js' | relative_url }}"></script>
