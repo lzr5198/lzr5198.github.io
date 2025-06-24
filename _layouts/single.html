@@ -27,7 +27,14 @@ layout: default
       {% unless page.header.overlay_color or page.header.overlay_image %}
         <header>
           {% if page.title %}
-            <h1 class="page__title" itemprop="headline">{{ page.title | markdownify | remove: "<p>" | remove: "</p>" }}</h1>
+            <h1 class="page__title" itemprop="headline">
+              {% if page.paperurl %}
+                <a href="{{ page.paperurl }}" target="_blank" title="Download Paper" style="font-size: 0.88em; text-decoration: none;">
+                  <i class="fa fa-download" aria-hidden="true"></i>
+                </a>
+              {% endif %}
+              {{ page.title | markdownify | remove: "<p>" | remove: "</p>" }}
+            </h1>
           {% endif %}
 
           {% if page.read_time %}
@@ -36,43 +43,56 @@ layout: default
           {% if page.modified %}
             <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> {{ site.data.ui-text[site.locale].date_label | default: "Published:" }}</strong> <time datetime="{{ page.modified | date: "%Y-%m-%d" }}">{{ page.modified | date: "%B %d, %Y" }}</time></p>
           {% endif %}
-      
-        
+  
           {% if page.collection == 'teaching' or page.collection == 'teaching_zh' %}
             <p> {{ page.type }}, <i>{{ page.venue }}</i>, {{ page.date | default: "1900-01-01" | date: "%Y" }} </p>
           {% elsif page.collection == 'publications' and page.status == 0 %}
-            <p style="color: red;">This paper is currently under review</p>
+            <p style="color: red; margin-bottom: 10px;">This paper is currently under review</p>
           {% elsif page.collection == 'publications_zh' and page.status == 0 %}
-            <p style="color: red;">This paper is currently under review</p>
+            <p style="color: red; margin-bottom: 10px;">This paper is currently under review</p>
           {% elsif page.collection == 'publications' and page.status == 1 %}
-            <p>Accepted in <i>{{ page.venue }}</i>, {{ page.date | default: "1900-01-01" | date: "%Y" }} </p>
+            <p style="margin-bottom: 10px;">Accepted in <i>{{ page.venue }}</i> {{ page.date | default: "1900-01-01" | date: "%Y" }} </p>
           {% elsif page.collection == 'publications_zh' and page.status == 1 %}
-            <p>已在 <i>{{ page.venue }}</i>, {{ page.date | default: "1900-01-01" | date: "%Y" }} 被接受</p>
+            <p style="margin-bottom: 10px;">已在 <i>{{ page.venue }}</i> {{ page.date | default: "1900-01-01" | date: "%Y" }} 被接受</p>
           {% elsif page.collection == 'publications' and page.status == 2 %}
-            <p>Published in <i>{{ page.venue }}</i>, {{ page.date | default: "1900-01-01" | date: "%Y" }} </p>
+            <p style="margin-bottom: 10px;">Published in <i>{{ page.venue }}</i> {{ page.date | default: "1900-01-01" | date: "%Y" }} </p>
           {% elsif page.collection == 'publications_zh' and page.status == 2 %}
-            <p>发表于 <i>{{ page.venue }}</i>, {{ page.date | default: "1900-01-01" | date: "%Y" }} </p>
+            <p style="margin-bottom: 10px;">发表于 <i>{{ page.venue }}</i> {{ page.date | default: "1900-01-01" | date: "%Y" }} </p>
           {% endif %}
         </header>
       {% endunless %}
 
       <section class="page__content" itemprop="text">
-        {% if page.citation and page.paperurl and page.slidesurl %}
-          <p style="font-size: smaller">Recommended citation: {{ page.citation }}<br /><a target="_blank" href="{{ page.paperurl }}">Download Paper</a> | <a target="_blank" href="{{ page.slidesurl }}">Download Slides</a></p>
-        {% elsif page.citation and page.paperurl and page.doi%}
-          <p style="font-size: smaller">Recommended citation: {{ page.citation }}<br />DOI: {{ page.doi }}<br /><a target="_blank" href="{{ page.paperurl }}">Download Paper</a></p>
-        {% elsif page.citation and page.paperurl %}
-          <p style="font-size: smaller">Recommended citation: {{ page.citation }}<br /><a target="_blank" href="{{ page.paperurl }}">Download Paper</a></p>
-        {% elsif page.citation and page.slidesurl %}
-          <p style="font-size: smaller">Recommended citation: {{ page.citation }}<br /><a target="_blank" href="{{ page.slidesurl }}">Download Slides</a></p>
-        {% elsif page.paperurl and page.slidesurl %}
-          <p style="font-size: smaller"><a target="_blank" href="{{ page.paperurl }}">Download Paper</a> | <a target="_blank" href="{{ page.slidesurl }}">Download Slides</a></p>
-        {% elsif page.citation %}
-          <p style="font-size: smaller">Recommended citation: {{ page.citation }}</p>
-        {% elsif page.slidesurl %}
-          <p style="font-size: smaller"><a target="_blank" href="{{ page.slidesurl }}">Download Slides</a></p>
-        {% elsif page.paperurl %}
-          <p style="font-size: smaller"><a target="_blank" href="{{ page.paperurl }}">Download Paper</a></p>
+        {% if page.collection == 'publications' %}
+          <p style="font-size: smaller">
+            {% if page.citation %}
+              Recommended citation: {{ page.citation }}<br />
+            {% endif %}
+            {% if page.doi %}
+              DOI: <a target="_blank" href="{{ page.doi }}">{{ page.doi }}</a><br />
+            {% endif %}
+            {% if page.full_version %}
+              Full version: <a target="_blank" href="{{ page.full_version }}">{{ page.full_version }}</a><br />
+            {% endif %}
+            {% if page.slidesurl %}
+              <a target="_blank" href="{{ page.slidesurl }}">Download Slides</a>
+            {% endif %}
+          </p>
+        {% elsif page.collection == 'publications_zh' %}
+          <p style="font-size: smaller">
+            {% if page.citation %}
+              推荐引用：{{ page.citation }}<br />
+            {% endif %}
+            {% if page.doi %}
+              DOI: <a target="_blank" href="{{ page.doi }}">{{ page.doi }}</a><br />
+            {% endif %}
+            {% if page.full_version %}
+              完整版本: <a target="_blank" href="{{ page.full_version }}">{{ page.full_version }}</a><br />
+            {% endif %}
+            {% if page.slidesurl %}
+              <a target="_blank" href="{{ page.slidesurl }}">下载PPT</a>
+            {% endif %}
+          </p>
         {% endif %}
 
         {% if page.link %}<div><a href="{{ page.link }}" class="btn">{{ site.data.ui-text[site.locale].ext_link_label | default: "Direct Link" }}</a></div>{% endif %}

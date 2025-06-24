@@ -59,7 +59,7 @@
 
           {% if post.collection == 'publications' or post.collection == 'publications_zh' %}
             <div class="place">
-              <i>{{ post.venue }}</i>, {{ post.date | date: "%Y" }}
+              <i>{{ post.venue }}</i> {{ post.date | date: "%Y" }}
             </div>
             <div class="authors">
               {{ post.authors }}
