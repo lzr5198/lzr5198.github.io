@@ -66,31 +66,31 @@ layout: default
         {% if page.collection == 'publications' %}
           <p style="font-size: smaller">
             {% if page.citation %}
-              Recommended citation: {{ page.citation }}<br />
+              • Recommended citation: {{ page.citation }}<br />
             {% endif %}
             {% if page.doi %}
-              DOI: <a target="_blank" href="{{ page.doi }}">{{ page.doi }}</a><br />
+              • DOI: <a target="_blank" href="{{ page.doi }}">{{ page.doi }}</a><br />
             {% endif %}
             {% if page.full_version %}
-              Full version: <a target="_blank" href="{{ page.full_version }}">{{ page.full_version }}</a><br />
+              • Full version: <a target="_blank" href="{{ page.full_version }}">{{ page.full_version }}</a><br />
             {% endif %}
             {% if page.slidesurl %}
-              <a target="_blank" href="{{ page.slidesurl }}">Download Slides</a>
+              • <a target="_blank" href="{{ page.slidesurl }}">Download Slides</a>
             {% endif %}
           </p>
         {% elsif page.collection == 'publications_zh' %}
           <p style="font-size: smaller">
             {% if page.citation %}
-              推荐引用：{{ page.citation }}<br />
+              • 引用：{{ page.citation }}<br />
             {% endif %}
             {% if page.doi %}
-              DOI: <a target="_blank" href="{{ page.doi }}">{{ page.doi }}</a><br />
+              • DOI: <a target="_blank" href="{{ page.doi }}">{{ page.doi }}</a><br />
             {% endif %}
             {% if page.full_version %}
-              完整版本: <a target="_blank" href="{{ page.full_version }}">{{ page.full_version }}</a><br />
+              • 完整版本: <a target="_blank" href="{{ page.full_version }}">{{ page.full_version }}</a><br />
             {% endif %}
             {% if page.slidesurl %}
-              <a target="_blank" href="{{ page.slidesurl }}">下载PPT</a>
+              • <a target="_blank" href="{{ page.slidesurl }}">下载PPT</a>
             {% endif %}
           </p>
         {% endif %}
