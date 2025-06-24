@@ -28,12 +28,12 @@ layout: default
         <header>
           {% if page.title %}
             <h1 class="page__title" itemprop="headline">
+              {{ page.title | markdownify | remove: "<p>" | remove: "</p>" }}
               {% if page.paperurl %}
-                <a href="{{ page.paperurl }}" target="_blank" title="Download Paper" style="font-size: 0.88em; text-decoration: none;">
+                <a href="{{ page.paperurl }}" target="_blank" title="Download Paper" style="margin-left: 3px; font-size: 0.85em; text-decoration: none;">
                   <i class="fa fa-download" aria-hidden="true"></i>
                 </a>
               {% endif %}
-              {{ page.title | markdownify | remove: "<p>" | remove: "</p>" }}
             </h1>
           {% endif %}
 
