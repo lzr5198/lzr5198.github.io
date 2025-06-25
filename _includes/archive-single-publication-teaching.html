@@ -62,12 +62,11 @@
               <i>{{ post.venue }}</i> {{ post.date | date: "%Y" }}
             </div>
             <div class="authors">
-              {{ post.authors }}
+              {{ post.authors | replace: 'Zhaorun Lin', '<u style="color: #20247b;">Zhaorun Lin</u>' }}
             </div>
-
           {% else %}
             <div class="authors">
-              by {{ post.authors }}
+              {{ post.authors | replace: 'Zhaorun Lin', '<u style="color: #20247b;">Zhaorun Lin</u>' }}
             </div>
             <div class="place">
               <i>@{{ post.venue }}</i>
