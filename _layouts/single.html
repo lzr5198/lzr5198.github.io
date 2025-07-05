@@ -55,9 +55,9 @@ layout: default
           {% elsif page.collection == 'publications_zh' and page.status == 1 %}
             <p style="margin-bottom: 10px;">已在 <i>{{ page.venue }}</i> {{ page.date | default: "1900-01-01" | date: "%Y" }} 被接受</p>
           {% elsif page.collection == 'publications' and page.status == 2 %}
-            <p style="margin-bottom: 10px;">Published in <i>{{ page.venue }}</i> {{ page.date | default: "1900-01-01" | date: "%Y" }} </p>
+            <p style="margin-bottom: 10px;">Published in <i>{{ page.venue }}</i>, {{ page.date | default: "1900-01-01" | date: "%Y" }} </p>
           {% elsif page.collection == 'publications_zh' and page.status == 2 %}
-            <p style="margin-bottom: 10px;">发表于 <i>{{ page.venue }}</i> {{ page.date | default: "1900-01-01" | date: "%Y" }} </p>
+            <p style="margin-bottom: 10px;">发表于 <i>{{ page.venue }}</i>, {{ page.date | default: "1900-01-01" | date: "%Y" }} </p>
           {% endif %}
         </header>
       {% endunless %}
