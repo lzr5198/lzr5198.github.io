@@ -4,7 +4,7 @@ collection: publications_zh
 permalink: /zh/publications/2025-thesis
 date: 2025-08-01
 term: "Summer"
-venue: 'Hong Kong University of Science and Technology'
+venue: '香港科技大学'
 paperurl: '/files/thesis.pdf'
 authors: 'Zhaorun Lin'
 status: 2 # 0: under review 1: accepted in press 2: published
