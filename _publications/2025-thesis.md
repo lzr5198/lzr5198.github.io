@@ -10,7 +10,7 @@ authors: 'Zhaorun Lin'
 status: 2 # 0: under review 1: accepted in press 2: published
 index_terms: ['Smart Contracts', 'Blockchain']
 # excerpt: 'This paper is about the number 1. The number 2 is left for future work.'
-# doi: "https://doi.org/10.1007/978-3-031-87054-5_1"
+doi: "https://arxiv.org/abs/2507.03258"
 # citation: 'T. Barakbayeva, S. Farokhnia, A. K. Goharshady, P. Li, Z. Lin, "Improved Gas Optimization of Smart Contracts," in 11th International Conference on Fundamentals of Software Engineering (FSEN), 2025, pp 1-10.'
 ---
 **Abstract** — Programmable blockchains have long been a hot research topic given their tremendous use in decentralized applications. Smart contracts, using blockchains as their underlying technology, inherit the desired properties such as verifiability, immutability, and transparency, which make it a great suit in trustless environments.
