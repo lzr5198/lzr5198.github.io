@@ -10,7 +10,9 @@ redirect_from:
 ---
 
 ## 简介
-我是[香港科技大学](https://hkust.edu.hk)（HKUST）计算机科学专业的二年级MPhil研究生，导师是 [Amir Goharshady](https://amir.goharshady.com) 教授。此外，我也在香港科技大学完成了本科学业，主修计算机工程，辅修大数据技术。
+我现在是[OKX](https://web3.okx.com)的一名工程师，主要从事链上区块及交易分析工作。
+
+在这之前，我是[香港科技大学](https://hkust.edu.hk)（HKUST）计算机科学专业的二年级MPhil研究生，导师是 [Amir Goharshady](https://amir.goharshady.com) 教授。此外，我也在香港科技大学完成了本科学业，主修计算机工程，辅修大数据技术。
 
 ## 研究
 我是 ALPACAS 研究小组的成员，该小组由我的导师带领，研究方向涵盖算法、逻辑、程序分析、加密货币和智能合约。

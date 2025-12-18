@@ -9,12 +9,14 @@ redirect_from:
 ---
 
 ## About
-I am currently a year 2 MPhil student in Computer Science at [Hong Kong University of Science and Technology](https://hkust.edu.hk) (HKUST) supervised by [Amir Goharshady](https://amir.goharshady.com). I also received my Bachelor's degree from HKUST with Computer Engineering as my major and Big Data Technology as my minor.
+I am currently an engineer at [OKX](https://web3.okx.com), focusing on on-chain block analysis across multiple blockchain networks.
 
-## Research
-I am a member of the [ALPACAS Research group](https://amir.goharshady.com/group), which is led by my supervisor and focuses its research on Algorithms, Logic, Program Analysis, Cryptocurrencies and Smart contracts.
+I was a MPhil student in Computer Science at [Hong Kong University of Science and Technology](https://hkust.edu.hk) (HKUST) supervised by [Amir Goharshady](https://amir.goharshady.com). Prior to that, I also received my Bachelor's degree from HKUST with Computer Engineering as my major and Big Data Technology as my minor.
 
-My research focus lies within the intersection of Cryptography and Blockchain, in which I design and implement secure blockchain protocol by leveraging various cryptographic and game-theoretic tools. I also work on the cryptographic tools themselves to improve their security. Besides that, I'm also interested in and have numerous projects and internship experiences related to AI and software engineering.
+## Previous Research
+I was a member of the [ALPACAS Research group](https://amir.goharshady.com/group), which is led by my supervisor and focuses its research on Algorithms, Logic, Program Analysis, Cryptocurrencies and Smart contracts.
+
+My research focus lied within the intersection of Cryptography and Blockchain, in which I designed and implemented secure blockchain protocol by leveraging various cryptographic and game-theoretic tools. I also worked on the cryptographic tools themselves to improve their security. Besides, I'm also interested in and had numerous projects and internship experiences related to AI and software engineering.
 
 <link rel="stylesheet" type="text/css" href="/assets/css/mystyle.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">

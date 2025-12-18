@@ -20,6 +20,19 @@ words_per_minute         : 160
 future                   : true
 read_more                : "disabled" # if enabled, adds "Read more" links to excerpts
 talkmap_link             : false #change to true to add link to talkmap on talks page
+
+# Blog Categories
+blog_categories:
+  - name: "AI"
+    name_zh: "人工智能"
+  - name: "Algorithm"
+    name_zh: "算法"
+  - name: "Blockchain & Web3"
+    name_zh: "区块链 & Web3"
+  - name: "Cryptography"
+    name_zh: "密码学"
+  - name: "Tools & Hacks"
+    name_zh: "黑科技"
 comments:
   provider               : # false (default), "disqus", "discourse", "facebook", "google-plus", "staticman", "custom"
   disqus:
@@ -83,8 +96,8 @@ author:
   name             : "Zhaorun Lin"
   name_zh          : "林昭润"
   avatar           : "profile1.png"
-  bio              : "A year 2 MPhil student in Computer Science @ the Hong Kong University of Science and Technology"
-  bio_zh           : "香港科技大学MPhil二年级计算机科学的学生"
+  bio              : "An Engineer @ OKX"
+  bio_zh           : "OKX工程师"
   location         : "Hong Kong"
   location_zh      : "香港"
   employer         :
@@ -195,6 +208,9 @@ collections:
   awards:
     output: true
     permalink: /:collection/:path/
+  blog:
+    output: true
+    permalink: /blog/:path/
   archive_projects:
     output: true
     permalink: /:collection/:path/
@@ -222,6 +238,9 @@ collections:
   teaching_zh:
     output: true
     permalink: /zh/teaching/:path/
+  blog_zh:
+    output: true
+    permalink: /zh/blog/:path/
 
 
 # Defaults
@@ -298,6 +317,16 @@ defaults:
       author_profile: true
       share: true
       comments: true
+  # _blog
+  - scope:
+      path: ""
+      type: blog
+    values:
+      layout: single
+      author_profile: true
+      read_time: true
+      share: true
+      comments: true
   # _portfolio
   - scope:
       path: ""
@@ -358,6 +387,16 @@ defaults:
     values:
       layout: single
       author_profile: true
+      share: true
+      comments: true
+  # blog_zh
+  - scope:
+      path: ""
+      type: blog_zh
+    values:
+      layout: single
+      author_profile: true
+      read_time: true
       share: true
       comments: true
   # zh
