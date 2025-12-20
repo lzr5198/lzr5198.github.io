@@ -15,8 +15,8 @@ main:
   - title: "TAs"
     url: /teaching/
 
-  # - title: "Blogs"
-  #   url: /blog/
+  - title: "Blogs"
+    url: /blog/
 
   - title: "CV"
     url: /files/cv.pdf

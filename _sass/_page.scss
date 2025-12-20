@@ -158,12 +158,143 @@
       }
     }
   }
+
+  /* Banner mode: full image shown without cropping */
+  &--banner {
+    position: relative;
+    margin-bottom: 2em;
+    @include clearfix;
+    animation: intro 0.3s both;
+    animation-delay: 0.25s;
+  }
+
+  /* Full viewport hero - covers entire screen before title */
+  &--fullscreen {
+    position: relative;
+    min-height: 100vh;
+    margin-bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    animation: intro 0.5s both;
+    animation-delay: 0.15s;
+
+    &::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0) 0%,
+        rgba(0, 0, 0, 0.15) 50%,
+        rgba(0, 0, 0, 0.7) 100%
+      );
+      z-index: 1;
+    }
+
+    .wrapper {
+      position: relative;
+      z-index: 2;
+      padding: 2em 1.5em 3em;
+      max-width: $x-large;
+      margin: 0 auto;
+      width: 100%;
+
+      @include breakpoint($medium) {
+        padding: 3em 2em 4em;
+      }
+    }
+
+    .page__title {
+      color: #fff;
+      font-size: $type-size-2;
+      text-shadow: 0 2px 8px rgba(#000, 0.5);
+      margin-bottom: 0.25em;
+      line-height: 1.15;
+
+      @include breakpoint($small) {
+        font-size: $type-size-1;
+      }
+
+      @include breakpoint($medium) {
+        font-size: 2.8rem;
+      }
+    }
+
+    .page__lead {
+      color: rgba(255, 255, 255, 0.9);
+      font-size: $type-size-5;
+      text-shadow: 0 1px 4px rgba(#000, 0.4);
+      max-width: $medium;
+      margin-bottom: 0;
+
+      @include breakpoint($medium) {
+        font-size: $type-size-4;
+      }
+    }
+
+    .page__meta {
+      color: rgba(255, 255, 255, 0.8);
+      text-shadow: 0 1px 3px rgba(#000, 0.4);
+      margin-top: 1em;
+    }
+
+    a {
+      color: #fff;
+    }
+
+    .btn {
+      color: #fff;
+      text-shadow: none;
+    }
+  }
 }
 
 .page__hero-image {
   width: 100%;
   height: auto;
   -ms-interpolation-mode: bicubic;
+}
+
+.page__hero-banner-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 70vh;
+  object-fit: contain;
+  -ms-interpolation-mode: bicubic;
+}
+
+.page__hero-banner-content {
+  padding: 1.5em 1em;
+  
+  @include breakpoint($x-large) {
+    max-width: $x-large;
+    margin: 0 auto;
+  }
+
+  .page__title {
+    margin-top: 0;
+    margin-bottom: 0.25em;
+    font-size: $type-size-2;
+
+    @include breakpoint($small) {
+      font-size: $type-size-1;
+    }
+  }
+
+  .page__lead {
+    font-size: $type-size-5;
+    color: mix(#fff, $gray, 25%);
+    margin-bottom: 0;
+
+    @include breakpoint($medium) {
+      font-size: $type-size-4;
+    }
+  }
 }
 
 .page__hero-caption {

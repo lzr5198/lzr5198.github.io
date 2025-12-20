@@ -74,6 +74,59 @@
   }
 }
 
+/* Inline teaser for list view - positioned on the right */
+.archive__item--with-teaser {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 1.5em;
+
+  .archive__item-body {
+    flex: 1;
+    min-width: 0;
+    order: 1;
+  }
+
+  .archive__item-teaser--inline {
+    flex-shrink: 0;
+    order: 2;
+    width: 140px;
+    height: 90px;
+    border-radius: $border-radius;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    @include breakpoint($medium) {
+      width: 180px;
+      height: 110px;
+    }
+
+    @include breakpoint($large) {
+      width: 200px;
+      height: 120px;
+    }
+  }
+
+  &:hover .archive__item-teaser--inline img {
+    transform: scale(1.03);
+    box-shadow: 0 4px 16px rgba(#000, 0.18);
+  }
+}
+
+/* Body wrapper for archive items */
+.archive__item-body {
+  .archive__item-title {
+    margin-top: 0;
+  }
+}
+
 .archive__item:hover {
   .archive__item-teaser {
     box-shadow: 0 0 10px rgba(#000, 0.25);

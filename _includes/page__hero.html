@@ -24,10 +24,25 @@
   {% capture overlay_filter %}rgba(0, 0, 0, {{ page.header.overlay_filter }}){% endcapture %}
 {% endif %}
 
-<div class="page__hero{% if page.header.overlay_color or page.header.overlay_image %}--overlay{% endif %}"
-  style="{% if page.header.overlay_color %}background-color: {{ page.header.overlay_color | default: 'transparent' }};{% endif %} {% if overlay_img_path %}background-image: {% if overlay_filter %}linear-gradient({{ overlay_filter }}, {{ overlay_filter }}), {% endif %}url('{{ overlay_img_path }}');{% endif %}"
+{% comment %}Determine hero class: fullscreen, overlay, or default{% endcomment %}
+{% if page.header.fullscreen and overlay_img_path %}
+  {% assign hero_class = "page__hero--fullscreen" %}
+  {% assign use_background_image = true %}
+{% elsif page.header.overlay_color or page.header.overlay_image %}
+  {% assign hero_class = "page__hero--banner" %}
+  {% assign use_background_image = false %}
+{% else %}
+  {% assign hero_class = "page__hero" %}
+  {% assign use_background_image = false %}
+{% endif %}
+
+<div class="{{ hero_class }}"
+  {% if use_background_image %}
+  style="{% if page.header.overlay_color %}background-color: {{ page.header.overlay_color | default: 'transparent' }};{% endif %} {% if overlay_img_path %}background-image: url('{{ overlay_img_path }}');{% endif %}"
+  {% endif %}
 >
-  {% if page.header.overlay_color or page.header.overlay_image %}
+  {% if page.header.fullscreen %}
+    {% comment %}Fullscreen mode: title over background image{% endcomment %}
     <div class="wrapper">
       <h1 class="page__title" itemprop="headline">
         {% if paginator %}
@@ -46,7 +61,18 @@
         <p><a href="{{ cta_path }}" class="btn btn--light-outline btn--large">{{ page.header.cta_label | default: site.data.ui-text[site.locale].more_label | default: "Learn More" }}</a></p>
       {% endif %}
     </div>
-  {% else %}
+  {% elsif overlay_img_path %}
+    {% comment %}Banner mode: full image shown above content, no cropping{% endcomment %}
+    <img src="{{ overlay_img_path }}" alt="{{ page.title }}" class="page__hero-banner-image">
+    <div class="page__hero-banner-content">
+      <h1 class="page__title" itemprop="headline">
+        {{ page.title | default: site.title | markdownify | remove: "<p>" | remove: "</p>" }}
+      </h1>
+      {% if page.excerpt %}
+        <p class="page__lead">{{ page.excerpt | markdownify | remove: "<p>" | remove: "</p>" }}</p>
+      {% endif %}
+    </div>
+  {% elsif page.header.image %}
     <img src="{{ img_path }}" alt="{{ page.title }}" class="page__hero-image">
   {% endif %}
   {% if page.header.caption %}
