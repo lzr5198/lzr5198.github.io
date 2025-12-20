@@ -171,7 +171,7 @@
   /* Full viewport hero - covers entire screen before title */
   &--fullscreen {
     position: relative;
-    min-height: 100vh;
+    min-height: 60vh;
     margin-bottom: 0;
     display: flex;
     flex-direction: column;
@@ -181,6 +181,14 @@
     background-position: center;
     animation: intro 0.5s both;
     animation-delay: 0.15s;
+
+    @include breakpoint($medium) {
+      min-height: 80vh;
+    }
+
+    @include breakpoint($large) {
+      min-height: 100vh;
+    }
 
     &::before {
       content: '';
@@ -263,9 +271,17 @@
   display: block;
   width: 100%;
   height: auto;
-  max-height: 70vh;
+  max-height: 50vh;
   object-fit: contain;
   -ms-interpolation-mode: bicubic;
+
+  @include breakpoint($medium) {
+    max-height: 60vh;
+  }
+
+  @include breakpoint($large) {
+    max-height: 70vh;
+  }
 }
 
 .page__hero-banner-content {
