@@ -62,15 +62,16 @@
       {% endif %}
     </div>
   {% elsif overlay_img_path %}
-    {% comment %}Banner mode: full image shown above content, no cropping{% endcomment %}
-    <img src="{{ overlay_img_path }}" alt="{{ page.title }}" class="page__hero-banner-image">
-    <div class="page__hero-banner-content">
-      <h1 class="page__title" itemprop="headline">
-        {{ page.title | default: site.title | markdownify | remove: "<p>" | remove: "</p>" }}
-      </h1>
-      {% if page.excerpt %}
-        <p class="page__lead">{{ page.excerpt | markdownify | remove: "<p>" | remove: "</p>" }}</p>
-      {% endif %}
+    {% comment %}Banner mode: same style as fullscreen but content-width{% endcomment %}
+    <div class="page__hero-contained" style="background-image: url('{{ overlay_img_path }}');">
+      <div class="wrapper">
+        <h1 class="page__title" itemprop="headline">
+          {{ page.title | default: site.title | markdownify | remove: "<p>" | remove: "</p>" }}
+        </h1>
+        {% if page.excerpt %}
+          <p class="page__lead">{{ page.excerpt | markdownify | remove: "<p>" | remove: "</p>" }}</p>
+        {% endif %}
+      </div>
     </div>
   {% elsif page.header.image %}
     <img src="{{ img_path }}" alt="{{ page.title }}" class="page__hero-image">

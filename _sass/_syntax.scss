@@ -10,6 +10,7 @@ div.highlighter-rouge, figure.highlight {
   border-radius: $border-radius;
   background-color: $code-background-color;
   box-shadow: $box-shadow;
+  overflow-x: auto;
 
   &:before {
     position: absolute;
@@ -28,8 +29,20 @@ div.highlighter-rouge, figure.highlight {
   .highlight {
     margin: 0;
     font-family: $monospace;
-    font-size: $type-size-7;
+    font-size: 0.95em;
     line-height: 1.8;
+  }
+
+  pre {
+    margin: 0;
+    white-space: pre;
+    word-wrap: normal;
+    overflow-x: auto;
+  }
+
+  code {
+    white-space: pre;
+    word-wrap: normal;
   }
 }
 

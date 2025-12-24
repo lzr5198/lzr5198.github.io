@@ -3,6 +3,30 @@
    ========================================================================== */
 
 $(document).ready(function(){
+  // Parallax scroll for contained hero
+  var $heroContained = $(".page__hero-contained");
+  if ($heroContained.length) {
+    var updateParallax = function() {
+      var scrollTop = $(window).scrollTop();
+      var heroOffset = $heroContained.offset().top;
+      var heroHeight = $heroContained.outerHeight();
+      
+      // Calculate scroll progress (0 to 1)
+      var scrollProgress = scrollTop / (heroOffset + heroHeight);
+      scrollProgress = Math.max(0, Math.min(1, scrollProgress));
+      
+      // Start at 20% (upper-middle), move to 100% (bottom) as we scroll
+      var bgPosition = 20 + (scrollProgress * 80);
+      $heroContained.css("background-position", "center " + bgPosition + "%");
+    };
+    
+    // Set initial position immediately
+    updateParallax();
+    
+    // Update on scroll
+    $(window).on("scroll", updateParallax);
+  }
+
    // Sticky footer
   var bumpIt = function() {
       $("body").css("margin-bottom", $(".page__footer").outerHeight(true));
