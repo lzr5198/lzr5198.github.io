@@ -65,6 +65,10 @@ layout: default
             <p style="margin-bottom: 10px;">Published in <i>{{ page.venue }}</i>, {{ page.date | default: "1900-01-01" | date: "%Y" }} </p>
           {% elsif page.collection == 'publications_zh' and page.status == 2 %}
             <p style="margin-bottom: 10px;">发表于 <i>{{ page.venue }}</i>, {{ page.date | default: "1900-01-01" | date: "%Y" }} </p>
+          {% elsif page.venue and page.date %}
+            <p>Published in <i>{{ page.venue }}</i>, {{ page.date | default: "1900-01-01" | date: "%Y" }} </p>
+          {% elsif page.date %}
+            <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> {{ site.data.ui-text[ui_locale].date_label | default: "Published:" }}</strong> <time datetime="{{ page.date | date_to_xmlschema }}">{% if ui_locale == "zh" %}{{ page.date | date: "%Y年%m月%d日" }}{% else %}{{ page.date | default: "1900-01-01" | date: "%B %d, %Y" }}{% endif %}</time></p>
           {% endif %}
         </header>
       {% endunless %}
@@ -100,6 +104,10 @@ layout: default
               • <a target="_blank" href="{{ page.slidesurl }}">下载PPT</a>
             {% endif %}
           </p>
+        {% elsif page.citation and page.paperurl %}
+          <p style="font-size: smaller">Recommended citation: {{ page.citation }} <a href="{{ page.paperurl }}"><u>{{ page.paperurl }}</u></a></p>
+        {% elsif page.citation %}
+          <p style="font-size: smaller">Recommended citation: {{ page.citation }} </p>
         {% endif %}
 
         {% if page.link %}<div><a href="{{ page.link }}" class="btn">{{ site.data.ui-text[site.locale].ext_link_label | default: "Direct Link" }}</a></div>{% endif %}

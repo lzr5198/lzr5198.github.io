@@ -281,7 +281,7 @@ DEPENDENCIES
   jekyll-feed
   jekyll-sitemap
   thin
-  webrick
+  webrick (~> 1.8)
 
 BUNDLED WITH
    2.1.4
