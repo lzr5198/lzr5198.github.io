@@ -86,12 +86,10 @@ updateNav();
 /*
  * Theme Toggle
  */
-// detect OS/browser preference
-var browserPref = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-
 // Set the theme on page load or when explicitly called
 function setTheme(theme) {
-  var use_theme = theme || localStorage.getItem("theme") || $("html").attr("data-theme") || browserPref;
+  // Default to 'light' if no preference is stored
+  var use_theme = theme || localStorage.getItem("theme") || $("html").attr("data-theme") || 'light';
 
   if (use_theme === "dark") {
     $("html").attr("data-theme", "dark");
@@ -114,13 +112,6 @@ function toggleTheme() {
 $(document).ready(function() {
   // Set initial theme
   setTheme();
-  
-  // Listen for OS theme changes
-  window.matchMedia('(prefers-color-scheme: dark)').addEventListener("change", function(e) {
-    if (!localStorage.getItem("theme")) {
-      setTheme(e.matches ? "dark" : "light");
-    }
-  });
 
   // Enable the theme toggle
   $('#theme-toggle').on('click', toggleTheme);
