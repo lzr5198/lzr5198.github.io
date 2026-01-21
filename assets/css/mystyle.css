@@ -4,12 +4,12 @@
   z-index: 1;
 }
 .gray-bg {
-  background-color: #ffffff;
+  background-color: var(--global-bg-color, #ffffff);
 }
 .section-title h2 {
   /* font-weight: 500; */
   font-weight: bold;
-  color: #494152;
+  color: var(--global-text-color, #494152);
   font-size: 1.25em;
   margin: 0 0 20px;
   /* border-left: 5px solid #000000; */
@@ -28,7 +28,7 @@
 /* Resume Box
 ---------------------*/
 .resume-box {
-  background: #ffffff;
+  background: var(--global-bg-color, #ffffff);
   /* box-shadow: 0 0 1.25rem rgb(211, 209, 209); */
   border-radius: 10px;
 }
@@ -70,10 +70,10 @@
   position: absolute;
   left: 3.5px;
   top: -2px;
-  color: #000000;
+  color: var(--global-text-color, #000000);
   /* fc5356 */
   line-height: 34px;
-  background: #ffffff;
+  background: var(--global-bg-color, #ffffff);
   text-align: center;
   z-index: 1;
   /* border: 1px dashed; */
@@ -89,10 +89,10 @@
   position: absolute;
   left: 3.5px;
   right: 0;
-  color: #000000;
+  color: var(--global-text-color, #000000);
   /* fc5356 */
   line-height: 34px;
-  background: #ffffff;
+  background: var(--global-bg-color, #ffffff);
   text-align: center;
   z-index: 1;
   /* border: 1px dashed; */
@@ -109,7 +109,7 @@
 }
 
 .resume-box .time {
-  color: #000000;
+  color: var(--global-text-color, #000000);
   font-size: 16px;
   display: inline-block;
   font-weight: 800;
@@ -117,7 +117,7 @@
 }
 .resume-box h5 {
   /* font-weight: 700; */
-  color: #20247b;
+  color: var(--global-link-color, #20247b);
   font-size: 20px;
   /* margin-bottom: 10px; */
   /* padding-top: 3.5px; */
@@ -127,7 +127,7 @@
   font-size: 15px;
   font-weight: 700;
   /* position: absolute; */
-  color: #20247b;
+  color: var(--global-text-color, #20247b);
   left: 0px;
   text-align: left;
   /* margin: 5px 0px 5px 0px; */
@@ -138,6 +138,7 @@
   left: 0px;
   /* margin: 5px 0px 5px 0px; */
   text-align: left;
+  color: var(--global-text-color, inherit);
 }
 .resume-box p {
   margin: 0;

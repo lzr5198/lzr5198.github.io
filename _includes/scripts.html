@@ -1,6 +1,173 @@
-<script src="{{ base_path }}/assets/js/main.min.js"></script>
 <script src="{{ '/assets/js/age-counter.js' | relative_url }}"></script>
+
 <script>
+/*
+ * Greedy Navigation
+ * http://codepen.io/lukejacksonn/pen/PwmwWV
+ */
+var $nav = $('#site-nav');
+var $btn = $('#site-nav button');
+var $vlinks = $('#site-nav .visible-links');
+var $hlinks = $('#site-nav .hidden-links');
+
+var breaks = [];
+
+function getFirstPersistItem() {
+  // Find the first persist item that isn't the site title (first child)
+  var $persistItems = $vlinks.children(".persist");
+  // Skip the first persist item if it's the site title (has masthead__menu-item--lg class)
+  var $firstPersist = null;
+  $persistItems.each(function() {
+    if (!$(this).hasClass("masthead__menu-item--lg")) {
+      $firstPersist = $(this);
+      return false; // break the loop
+    }
+  });
+  return $firstPersist;
+}
+
+function updateNav() {
+  var availableSpace = $btn.hasClass('hidden') ? $nav.width() : $nav.width() - $btn.width() - 30;
+
+  // The visible list is overflowing the nav
+  if ($vlinks.width() > availableSpace) {
+    while ($vlinks.width() > availableSpace && $vlinks.children("*:not(.persist)").length > 0) {
+      breaks.push($vlinks.width());
+      $vlinks.children("*:not(.persist)").last().prependTo($hlinks);
+      availableSpace = $btn.hasClass("hidden") ? $nav.width() : $nav.width() - $btn.width() - 30;
+      $btn.removeClass("hidden");
+    }
+  } else {
+    while (breaks.length > 0 && availableSpace > breaks[breaks.length - 1]) {
+      var $firstPersist = getFirstPersistItem();
+      if ($firstPersist && $firstPersist.length > 0) {
+        $hlinks.children().first().insertBefore($firstPersist);
+      } else {
+        $hlinks.children().first().appendTo($vlinks);
+      }
+      breaks.pop();
+    }
+    if (breaks.length < 1) {
+      $btn.addClass('hidden');
+      $btn.removeClass('close');
+      $hlinks.addClass('hidden');
+    }
+  }
+
+  $btn.attr("count", breaks.length);
+
+  // update masthead height and the body/sidebar top padding
+  var mastheadHeight = $('.masthead').height();
+  $('body').css('padding-top', mastheadHeight + 'px');
+  if ($(".author__urls-wrapper button").is(":visible")) {
+    $(".sidebar").css("padding-top", "");
+  } else {
+    $(".sidebar").css("padding-top", mastheadHeight + "px");
+  }
+}
+
+// Window listeners
+$(window).on('resize', function() {
+  updateNav();
+});
+if (screen.orientation) {
+  screen.orientation.addEventListener("change", function() {
+    updateNav();
+  });
+}
+
+$btn.on('click', function() {
+  $hlinks.toggleClass('hidden');
+  $(this).toggleClass('close');
+});
+
+updateNav();
+
+/*
+ * Theme Toggle
+ */
+// detect OS/browser preference
+var browserPref = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+
+// Set the theme on page load or when explicitly called
+function setTheme(theme) {
+  var use_theme = theme || localStorage.getItem("theme") || $("html").attr("data-theme") || browserPref;
+
+  if (use_theme === "dark") {
+    $("html").attr("data-theme", "dark");
+    $("#theme-icon").removeClass("fa-sun").addClass("fa-moon");
+  } else {
+    $("html").removeAttr("data-theme");
+    $("#theme-icon").removeClass("fa-moon").addClass("fa-sun");
+  }
+}
+
+// Toggle the theme manually
+function toggleTheme() {
+  var current_theme = $("html").attr("data-theme");
+  var new_theme = current_theme === "dark" ? "light" : "dark";
+  localStorage.setItem("theme", new_theme);
+  setTheme(new_theme);
+}
+
+// Initialize on ready
+$(document).ready(function() {
+  // Set initial theme
+  setTheme();
+  
+  // Listen for OS theme changes
+  window.matchMedia('(prefers-color-scheme: dark)').addEventListener("change", function(e) {
+    if (!localStorage.getItem("theme")) {
+      setTheme(e.matches ? "dark" : "light");
+    }
+  });
+
+  // Enable the theme toggle
+  $('#theme-toggle').on('click', toggleTheme);
+
+  // Sticky footer
+  var bumpIt = function() {
+    $("body").css("margin-bottom", $(".page__footer").outerHeight(true));
+  };
+  var didResize = false;
+  $(window).resize(function() {
+    didResize = true;
+  });
+  setInterval(function() {
+    if (didResize) {
+      didResize = false;
+      bumpIt();
+    }
+  }, 250);
+  bumpIt();
+
+  // FitVids init
+  if (typeof $.fn.fitVids !== 'undefined') {
+    $("article").fitVids();
+  }
+
+  // Follow menu drop down
+  $(".author__urls-wrapper button").on("click", function() {
+    $(".author__urls").fadeToggle("fast", function() {});
+    $(".author__urls-wrapper button").toggleClass("open");
+  });
+
+  // Restore the follow menu if toggled on a window resize
+  $(window).on('resize', function() {
+    if ($('.author__urls.social-icons').css('display') == 'none' && $(window).width() >= 925) {
+      $(".author__urls").css('display', 'block');
+    }
+  });
+
+  // Init smooth scroll
+  if (typeof $.fn.smoothScroll !== 'undefined') {
+    $("a").smoothScroll({
+      offset: -70,
+      preventDefault: false,
+    });
+  }
+});
+
 /* Parallax scroll for contained hero - starts at middle, moves up on scroll */
 $(document).ready(function(){
   var $heroContained = $(".page__hero-contained");
@@ -9,20 +176,15 @@ $(document).ready(function(){
       var scrollTop = $(window).scrollTop();
       var heroOffset = $heroContained.offset().top;
       var heroHeight = $heroContained.outerHeight();
-      /* Calculate scroll progress (0 to 1) */
       var scrollProgress = scrollTop / (heroOffset + heroHeight);
       scrollProgress = Math.max(0, Math.min(1, scrollProgress));
-      /* Start at 20% (upper-middle), move to 100% (bottom) as we scroll */
       var bgPosition = 20 + (scrollProgress * 80);
       $heroContained.css("background-position", "center " + bgPosition + "%");
     };
-    /* Set initial position immediately */
     updateParallax();
-    /* Update on scroll */
     $(window).on("scroll", updateParallax);
   }
 });
 </script>
 
 {% include analytics.html %}
-{% include /comments-providers/scripts.html %}

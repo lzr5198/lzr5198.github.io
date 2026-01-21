@@ -45,7 +45,7 @@ layout: default
           {% endif %}
 
           {% if page.read_time %}
-            <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> {% include read-time.html %}</p>
+            <p class="page__meta"><i class="fa fa-clock" aria-hidden="true"></i> {% include read-time.html %}</p>
           {% endif %}
           {% if page.modified %}
             <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> {{ site.data.ui-text[ui_locale].date_label | default: "Published:" }}</strong> <time datetime="{{ page.modified | date: "%Y-%m-%d" }}">{% if ui_locale == "zh" %}{{ page.modified | date: "%Y年%m月%d日" }}{% else %}{{ page.modified | date: "%B %d, %Y" }}{% endif %}</time></p>
@@ -85,8 +85,14 @@ layout: default
             {% if page.full_version %}
               • Full version: <a target="_blank" href="{{ page.full_version }}">{{ page.full_version }}</a><br />
             {% endif %}
+            {% if page.paperurl %}
+              • <a target="_blank" href="{{ page.paperurl }}">Download Paper</a><br />
+            {% endif %}
             {% if page.slidesurl %}
-              • <a target="_blank" href="{{ page.slidesurl }}">Download Slides</a>
+              • <a target="_blank" href="{{ page.slidesurl }}">Download Slides</a><br />
+            {% endif %}
+            {% if page.bibtexurl %}
+              • <a target="_blank" href="{{ page.bibtexurl }}">Download Bibtex</a>
             {% endif %}
           </p>
         {% elsif page.collection == 'publications_zh' %}
@@ -100,14 +106,24 @@ layout: default
             {% if page.full_version %}
               • 完整版本：<a target="_blank" href="{{ page.full_version }}">{{ page.full_version }}</a><br />
             {% endif %}
+            {% if page.paperurl %}
+              • <a target="_blank" href="{{ page.paperurl }}">下载论文</a><br />
+            {% endif %}
             {% if page.slidesurl %}
-              • <a target="_blank" href="{{ page.slidesurl }}">下载PPT</a>
+              • <a target="_blank" href="{{ page.slidesurl }}">下载PPT</a><br />
+            {% endif %}
+            {% if page.bibtexurl %}
+              • <a target="_blank" href="{{ page.bibtexurl }}">下载Bibtex</a>
             {% endif %}
           </p>
         {% elsif page.citation and page.paperurl %}
           <p style="font-size: smaller">Recommended citation: {{ page.citation }} <a href="{{ page.paperurl }}"><u>{{ page.paperurl }}</u></a></p>
         {% elsif page.citation %}
-          <p style="font-size: smaller">Recommended citation: {{ page.citation }} </p>
+          <p style="font-size: smaller">Recommended citation: {{ page.citation }}</p>
+        {% elsif page.slidesurl %}
+          <p style="font-size: smaller"><a href="{{ page.slidesurl }}">Download Slides</a></p>
+        {% elsif page.bibtexurl %}
+          <p style="font-size: smaller"><a href="{{ page.bibtexurl }}">Download Bibtex</a></p>
         {% endif %}
 
         {% if page.link %}<div><a href="{{ page.link }}" class="btn">{{ site.data.ui-text[site.locale].ext_link_label | default: "Direct Link" }}</a></div>{% endif %}
