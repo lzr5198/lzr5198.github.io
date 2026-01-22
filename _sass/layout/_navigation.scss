@@ -183,6 +183,7 @@
     padding: 0.5rem 0;
     color: var(--global-masthead-link-color);
     text-decoration: none;
+    cursor: pointer;
 
     &:hover {
       color: var(--global-masthead-link-color-hover);

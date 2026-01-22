@@ -5,7 +5,7 @@
 #main {
   @include container;
   @include clearfix;
-  margin-top: 1em;
+  margin-top: 2em;
   padding-left: 1em;
   padding-right: 1em;
   animation: intro 0.3s both;
@@ -24,6 +24,17 @@
     max-width: $x-large;              // Match masthead max-width at x-large
     margin-left: auto;
     margin-right: auto;
+  }
+}
+
+// Content wrapper - contains hero + page content in 2nd grid column
+.main__content {
+  width: 100%;
+  min-width: 0;           // Prevent grid/flex overflow
+  overflow: hidden;       // Ensure content doesn't overflow container
+
+  @include breakpoint($large) {
+    grid-column: 2;
   }
 }
 
@@ -177,6 +188,7 @@
   /* Banner mode: full image shown without cropping */
   &--banner {
     position: relative;
+    width: 100%;
     margin-bottom: 1em;
     @include clearfix;
     animation: intro 0.3s both;
@@ -334,8 +346,9 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+  width: 100%;
   min-height: 300px;
-  margin: 0 1em 1em;
+  margin: 0 0 1em 0;
   border-radius: 8px;
   overflow: hidden;
   background-size: cover;
@@ -349,11 +362,10 @@
   }
 
   @include breakpoint($large) {
-    // Center the hero on the page
-    min-height: 450px;
+    // Use aspect ratio to maintain consistent proportions across all viewport widths
+    min-height: 0;
+    aspect-ratio: 16 / 9;
     max-width: 700px;
-    margin-left: auto;
-    margin-right: auto;
   }
 
   @include breakpoint($x-large) {
@@ -385,29 +397,29 @@
 
   .page__title {
     color: #fff;
-    font-size: $type-size-2;
+    font-size: $type-size-3;
     text-shadow: 0 2px 8px rgba(#000, 0.5);
     margin: 0 0 0.25em;
     line-height: 1.15;
 
     @include breakpoint($small) {
-      font-size: $type-size-1;
+      font-size: $type-size-2;
     }
 
     @include breakpoint($medium) {
-      font-size: 2.8rem;
+      font-size: 2.2rem;
     }
   }
 
   .page__lead {
     color: rgba(255, 255, 255, 0.9);
-    font-size: $type-size-5;
+    font-size: $type-size-6;
     text-shadow: 0 1px 4px rgba(#000, 0.4);
     max-width: $medium;
     margin-bottom: 0;
 
     @include breakpoint($medium) {
-      font-size: $type-size-4;
+      font-size: $type-size-5;
     }
   }
 
@@ -694,7 +706,7 @@
 /* Author highlight for publications */
 .author-highlight {
   color: #20247b;
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 html[data-theme="dark"] .author-highlight {

@@ -65,6 +65,9 @@ function filterCategories() {
       section.style.display = 'none';
     }
   });
+  
+  // Scroll to top of page
+  window.scrollTo(0, 0);
 }
 
 window.addEventListener('hashchange', filterCategories);

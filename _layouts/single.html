@@ -11,10 +11,6 @@ layout: default
   {% assign ui_locale = site.locale %}
 {% endif %}
 
-{% if page.header.overlay_color or page.header.overlay_image or page.header.image %}
-  {% include page__hero.html %}
-{% endif %}
-
 {% if page.url != "/" and site.breadcrumbs %}
   {% unless paginator %}
     {% include breadcrumbs.html %}
@@ -23,6 +19,11 @@ layout: default
 
 <div id="main" role="main">
   {% include sidebar.html %}
+
+  <div class="main__content">
+    {% if page.header.overlay_color or page.header.overlay_image or page.header.image %}
+      {% include page__hero.html %}
+    {% endif %}
 
   <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
     {% if page.title %}<meta itemprop="headline" content="{{ page.title | markdownify | strip_html | strip_newlines | escape_once }}">{% endif %}
@@ -166,4 +167,5 @@ layout: default
       </div>
     </div>
   {% endif %}
+  </div>
 </div>
