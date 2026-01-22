@@ -5,7 +5,7 @@
 #main {
   @include container;
   @include clearfix;
-  margin-top: 2em;
+  margin-top: 1em;
   padding-left: 1em;
   padding-right: 1em;
   animation: intro 0.3s both;
@@ -163,7 +163,7 @@
   /* Banner mode: full image shown without cropping */
   &--banner {
     position: relative;
-    margin-bottom: 2em;
+    margin-bottom: 1em;
     @include clearfix;
     animation: intro 0.3s both;
     animation-delay: 0.25s;
@@ -321,7 +321,7 @@
   flex-direction: column;
   justify-content: flex-end;
   min-height: 300px;
-  margin: 0 1em 2em;
+  margin: 0 1em 1em;
   border-radius: 8px;
   overflow: hidden;
   background-size: cover;
@@ -335,17 +335,15 @@
   }
 
   @include breakpoint($large) {
-    // Match .page width: 10/12 columns with 0.5/12 prefix
-    min-height: 500px;
-    width: calc(83.333% - 2em); // 10/12 = 83.333%
-    margin-left: calc(4.167% + 1em); // 0.5/12 = 4.167%
+    // Center the hero on the page
+    min-height: 450px;
+    max-width: 700px;
+    margin-left: auto;
     margin-right: auto;
   }
 
   @include breakpoint($x-large) {
-    max-width: calc(#{$x-large} * 0.8333);
-    margin-left: auto;
-    margin-right: auto;
+    max-width: 800px;
   }
 
   &::before {
