@@ -11,16 +11,30 @@
   animation: intro 0.3s both;
   animation-delay: 0.35s;
 
+  // Use CSS Grid for sidebar + content layout at large breakpoints
+  // Sidebar left edge aligns with masthead__menu left edge (same padding)
+  @include breakpoint($large) {
+    display: grid;
+    grid-template-columns: 200px 1fr;  // Sidebar fixed, content flexible
+    gap: 30px;
+  }
+
   @include breakpoint($x-large) {
-    max-width: $x-large;
+    grid-template-columns: 250px 1fr;  // Wider sidebar at x-large
+    max-width: $x-large;              // Match masthead max-width at x-large
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
 .page {
+  // Constrain page width within grid, aligned to right of sidebar
   @include breakpoint($large) {
-    @include span(10 of 12 last);
-    @include prefix(0.5 of 12);
-    @include suffix(2 of 12);
+    max-width: 700px;
+  }
+
+  @include breakpoint($x-large) {
+    max-width: 800px;
   }
 
   .page__inner-wrap {

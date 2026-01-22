@@ -17,15 +17,14 @@
     margin-top: 1em;
   }
 
-  @include breakpoint($x-large) {
-    height: 100vh;
-    overflow-y: auto;               // Add scrollbar if the sidebar is too long
-    position: fixed;
-    padding-top: $masthead-height;
-  }
-
+  // Sidebar sticky within #main grid at large breakpoints
   @include breakpoint($large) {
-    @include span(2 of 12);
+    position: sticky;
+    top: $masthead-height;          // Stick below the masthead
+    height: fit-content;
+    max-height: calc(100vh - #{$masthead-height});
+    overflow-y: auto;               // Add scrollbar if the sidebar is too long
+    align-self: start;              // Align to top of grid cell
     opacity: 1;
     -webkit-transition: opacity 0.2s ease-in-out;
             transition: opacity 0.2s ease-in-out;
@@ -33,11 +32,6 @@
     &:hover {
       opacity: 1;
     }
-  }
-
-  @include breakpoint($x-large) {
-    max-width: $sidebar-link-max-width;
-    padding-right: 0;
   }
 
   h2, h3, h4, h5, h6 {
@@ -158,8 +152,13 @@
     border-radius: 50%;
 
     @include breakpoint($large) {
+      max-width: 140px;             // Avatar size for sidebar
       padding: 5px;
       border: 1px solid var(--global-border-color);
+    }
+
+    @include breakpoint($x-large) {
+      max-width: 175px;             // Larger avatar for wider sidebar
     }
   }
 }
