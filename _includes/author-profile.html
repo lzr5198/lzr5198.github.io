@@ -11,32 +11,31 @@
 {%- endif -%}
 
 <div itemscope itemtype="http://schema.org/Person">
+  <div class="author__profile">
+    <div class="author__avatar">
+      {% if author.avatar contains "://" %}
+      	<img src="{{ author.avatar }}" alt="{{ author.name }}"  fetchpriority="high" />
+      {% else %}
+      	<img src="{{ author.avatar | prepend: "/images/" | prepend: base_path }}" class="author__avatar" alt="{{ author.name }}"  fetchpriority="high" />
+      {% endif %}
+    </div>
 
-  <div class="author__avatar">
-    {% if author.avatar contains "://" %}
-    	<img src="{{ author.avatar }}" alt="{{ author.name }}"  fetchpriority="high" />
-    {% else %}
-    	<img src="{{ author.avatar | prepend: "/images/" | prepend: base_path }}" class="author__avatar" alt="{{ author.name }}"  fetchpriority="high" />
-    {% endif %}
-  </div>
+    <div class="author__content">
+      {%- if is_cn -%}
+        <h3 class="author__name">{{ author.name_zh }}</h3>
+        <h6 style="margin-top: 10px;">年龄: <span id="age-counter">0</span> 岁</h6>
+        {% if author.bio_zh %}<p class="author__bio">{{ author.bio_zh }}</p>{% endif %}
+      {%- else -%}
+        <h3 class="author__name">{{ author.name }}</h3>
+        {% if author.pronouns %}<p class="author__pronouns">{{ author.pronouns }}</p>{% endif %}
+        <h6 style="margin-top: 10px;">Age: <span id="age-counter">0</span> years</h6>
+        {% if author.bio %}<p class="author__bio">{{ author.bio }}</p>{% endif %}
+      {%- endif -%}
+    </div>
 
-
-  <div class="author__content">
-    {%- if is_cn -%}
-      <h3 class="author__name">{{ author.name_zh }}</h3>
-      <h6 style="margin-top: 10px;">年龄: <span id="age-counter">0</span> 岁</h6>
-      {% if author.bio_zh %}<p class="author__bio">{{ author.bio_zh }}</p>{% endif %}
-    {%- else -%}
-      <h3 class="author__name">{{ author.name }}</h3>
-      {% if author.pronouns %}<p class="author__pronouns">{{ author.pronouns }}</p>{% endif %}
-      <h6 style="margin-top: 10px;">Age: <span id="age-counter">0</span> years</h6>
-      {% if author.bio %}<p class="author__bio">{{ author.bio }}</p>{% endif %}
-    {%- endif -%}
-  </div>
-
-  <div class="author__urls-wrapper">
-    <button class="btn btn--inverse">Follow</button>
-    <ul class="author__urls social-icons">
+    <div class="author__urls-wrapper">
+      <button class="btn btn--inverse">Follow</button>
+      <ul class="author__urls social-icons">
       <!-- Font Awesome icons / Biographic information  -->
       {% if author.location %}
         {%- if is_cn -%}
@@ -197,9 +196,10 @@
       {% if author.youtube %}
         <li><a href="https://www.youtube.com/@{{ author.youtube }}"><i class="fab fa-fw fa-youtube icon-pad-right" aria-hidden="true"></i>YouTube</a></li>
       {% endif %}
-      {% if author.zhihu %}
-      <li><a href="https://www.zhihu.com/people/{{ author.zhihu }}"><i class="fab fa-fw fa-zhihu icon-pad-right" aria-hidden="true"></i>Zhihu</a></li>
-      {% endif %}      
-    </ul>
+        {% if author.zhihu %}
+        <li><a href="https://www.zhihu.com/people/{{ author.zhihu }}"><i class="fab fa-fw fa-zhihu icon-pad-right" aria-hidden="true"></i>Zhihu</a></li>
+        {% endif %}      
+      </ul>
+    </div>
   </div>
 </div>

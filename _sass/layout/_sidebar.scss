@@ -136,14 +136,15 @@
    ========================================================================== */
 
 .author__avatar {
-  display: table-cell;
-  vertical-align: top;
+  display: block;
+  flex: 0 0 36px;
   width: 36px;
   // set width only, for non-square avatars
   // height: 36px;
 
   @include breakpoint($large) {
     display: block;
+    flex: none;
     width: auto;
     height: auto;
   }
@@ -164,15 +165,27 @@
   }
 }
 
+.author__profile {
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+
+  @include breakpoint($large) {
+    display: block;
+  }
+}
+
 .author__content {
-  display: table-cell;
-  vertical-align: top;
+  display: block;
+  flex: 1 1 auto;
+  min-width: 0;
   padding-left: 15px;
-  padding-right: 25px;
+  padding-right: 0;
   line-height: 1;
 
   @include breakpoint($large) {
     display: block;
+    flex: none;
     width: 100%;
     padding-left: 0;
     padding-right: 0;
@@ -219,8 +232,11 @@
 
 .author__urls-wrapper {
   position: relative;
-  display: table-cell;
-  vertical-align: middle;
+  display: block;
+  margin-top: 0;
+  margin-left: 10px;
+  flex: 0 0 auto;
+  align-self: flex-start;
   font-family: $sans-serif;
   z-index: 10;
   position: relative;
@@ -234,6 +250,9 @@
 
   @include breakpoint($large) {
     display: block;
+    margin-top: 10px;
+    margin-left: 0;
+    flex: none;
   }
 
   button {
@@ -243,6 +262,10 @@
       display: none;
     }
   }
+}
+
+#age-counter {
+  font-variant-numeric: tabular-nums;
 }
 
 .author__urls {
