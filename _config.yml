@@ -114,7 +114,6 @@ blog_categories:
     name_zh: "密码学"
   - name: "Tools & Hacks"
     name_zh: "黑科技"
-
 comments:
   provider               : # false (default), "disqus", "discourse", "facebook", "google-plus", "staticman", "custom"
   disqus:
