@@ -9,7 +9,7 @@ redirect_from:
 ---
 
 ## About
-I am currently an engineer at [OKX](https://web3.okx.com), focusing on on-chain block analysis across multiple blockchain networks.
+I am currently an AI Software Engineer at [OKX](https://web3.okx.com), designing AI workflows that automate integrating on-chain liquidity into the production trading aggregator's off-chain quoting service.
 
 I was a MPhil student in Computer Science at [Hong Kong University of Science and Technology](https://hkust.edu.hk) (HKUST) supervised by [Amir Goharshady](https://amir.goharshady.com). Prior to that, I also received my Bachelor's degree from HKUST with Computer Engineering as my major and Big Data Technology as my minor.
 

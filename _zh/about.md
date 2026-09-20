@@ -10,7 +10,7 @@ redirect_from:
 ---
 
 ## 简介
-我现在是[OKX](https://web3.okx.com)的一名工程师，主要从事链上区块及交易分析工作。
+我现在是 [OKX](https://web3.okx.com) 的 AI 软件工程师，负责将流动性接入 DeFi 聚合器的链下报价服务，并设计与落地相关的 AI Workflow。
 
 在这之前，我是[香港科技大学](https://hkust.edu.hk)（HKUST）计算机科学专业的二年级MPhil研究生，导师是 [Amir Goharshady](https://amir.goharshady.com) 教授。此外，我也在香港科技大学完成了本科学业，主修计算机工程，辅修大数据技术。
 
